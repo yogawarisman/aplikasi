@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.yogawarisman.materi"
+        }
+    }
+}

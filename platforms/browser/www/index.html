@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+		-->
+		<link rel="stylesheet" type="text/css" href=""/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="libs/fastclick.min.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script>
+			//0=a; 1=b; 2=c; 3=d; 4=e; 
+ 			correctAnswers=[0,1,2,3,4];
+			var AnsweredCorrectly=0;
+			function start(){
+			document.getElementById('quizstart').style.display="none";
+			document.getElementById('question0').style.display="block";
+			}
+			function toggle(a,b){
+			AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:-1);
+			document.getElementById('question'+a).style.display="none";
+			document.getElementById('question'+b).style.display="block";
+			}
+			function end(a){
+			AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:-1);
+			document.getElementById('question'+a).style.display="none";
+			document.getElementById('summary').style.display="block";
+			document.getElementById('result').innerHTML=AnsweredCorrectly;
+			}
+			function cobalagi(){
+				location.reload(true);
+				AnsweredCorrectly=0;
+			}	
+		var s = document.getElementById('myAudio');
+		function enableMute() { 
+			s.muted = true;
+		} 
+		function disableMute() { 
+			s.muted = false;
+		}
+		function checkMute() { 
+			alert(s.muted);
+		}
+	</script>
+		<title>Hello World</title>
+    </head>
+    <body>
+        <div id="app">
+            <div id="home-page" data-role="page">
+                <div data-role="content" >
+                    <div id="logoContainer" class="images">
+                            <img src="img/logo.png" id="logo"  />
+                    </div>
+                    <div id="menu">
+						<a data-icon="plus" data-theme="a" href="#silabus-page" data-role="button">SILABUS</a>
+                        <a data-icon="minus" data-theme="b" href="#materi-page"  data-role="button">MATERI</a>
+                        <a data-icon="bars" data-theme="c" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
+                        <a data-icon="arrow-d" data-theme="d" href="#reda-page"  data-role="button">REDA</a>
+						<a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
+                        <a data-icon="arrow-r" data-theme="b" href="#tentang-page"  data-role="button">TENTANG</a>
+                        <a data-icon="delete" data-theme="a" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
+                    	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
+							<div data-role="header" data-theme="a" class="ui-corner-top">
+								<h1>Yakin Keluar?</h1>                        
+							</div>
+							<div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">
+							<a data-icon="delete" href="#home-page" data-role="button" data-inline="true" data-rel="back" data-theme="b" >Tidak</a>
+							<a data-icon="check" href="#" data-role="button" data-inline="true"  onClick="navigator.app.exitApp()" data-transition="pop" data-theme="a" >Ya</a>
+							</div>
+						</div>
+                    </div>
+                    
+                </div>
+            </div>
+			<!-- /page  -->
+			 <div  id="silabus-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Silabus</h1>
+                </div>
+                <div data-role="content" style="font-size:14px" id="silabus">
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>Arus listrik dan arus elektron</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>muatan listrik</li>
+					        <li>definisi arus</li>
+					        <li>Read-only list item 3</li>
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>Bahan-bahan listrik,</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>konduktor</li>
+					        <li>isolator</li>
+					        <li>bahan semikonduktor</li>
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>Elemen pasif</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>resistor dan resistansi</li>
+					        <li>induktor dan induktansi</li>
+					        <li>kapasitor dan kapasitansi</li>
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>Elemen aktif</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>sumber arus</li>
+					        <li>sumber tegangan</li>					       
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>Rangkaian resistif arus searah</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>seri, paralel</li>
+					        <li>seri-paralel</li>
+							<li>hukum ohm</li>
+							<li>hukum kirchoff</li>     
+					    </ul>
+					</div>
+				</div>
+			</div>
+						<div  id="materi-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>MATERI</h1>
+                </div>
+				<a data-icon="arrow-r"    href="#arus-page" data-role="button">Arus listrik dan arus elektron</a>
+                <a data-icon="arrow-r"  href="#bahanListrik-page"  data-role="button">Bahan-bahan listrik</a>
+                <a data-icon="arrow-r"  href="#elemen-page"  data-role="button">Elemen pasif dan Elemen aktif</a>
+                <a data-icon="arrow-r"  href="#rangkaian-page"  data-role="button">Rangkaian resistif arus searah</a>
+                <div data-role="content" style="font-size:14px" >
+			    <p>Hujan dan matahari adalah perpaduan yang unik, saling bergantung, menjadi sebab dan akibat. Hujan dan matahari memaksa orang-orang berlindung di balik tempat-tempat teduh. Kecuali orang-orang yang berani menghadapi dingin dan terik.</p>
+                <p>Hujan Matahari lahir sebagai sebuah tetes-tetes perenungan, bahwa hidup ini sungguh menyimpan banyak hikmah. Terima kasih untuk siapa pun yang telah menjadi hujan dalam hidup saya. Orang-orang yang mengajari saya tentang hidup, tentang cinta, tentang pemahaman yang baik. Terima kasih untuk setiap orang yang hadir dalam hidup saya meski harus pergi dan tak pernah tinggal lama. Datang untuk memberikan pembelajaran yang berharga. Pergi pun meninggalkan pembelajaran. </p>
+                <p>Terima kasih juga untuk setiap orang yang menjadi matahari. Orang-orang yang memberikan sinarnya, menunjukkan jalan mana yang sebaiknya saya ambil ketika saya tidak tahu arah. Terima kasih atas pencerahan yang diberikan melalui berbagai cerita atau sekadar tertawa. Selamat hujan-hujanan. Jangan menghindar. Hujan itu rahmat.</p>              
+                </div>
+				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
+                <marquee>Buat alur materi, alur tampilan dan link halaman</marquee>                        
+                </div>
+            </div>
+			<div  id="arus-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#materi-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Arus listrik dan Arus elektron</h1>
+                </div>
+				<div data-role="content" style="font-size:14px" >
+					<h2>Atom</h2>
+					<div data-role="content" class="centerText">
+						<img src="img/atom.jpg" id="atom1"/>
+					</div>
+					<p>Pengertian Atom adalah partikel terkecil penyusun materi. Atom terdiri atas beberapa partikel dasar, yaitu elektron, proton, dan neutron. Adanya partikel-partikel inilah yang menyebabkan atom mempunyai sifat listrik, sebab elektron bermuatan negatif, proton bermuatan positif, dan neutron tidak bermuatan.</p>
+					<p>Atom unsur yang satu berbeda dengan atom unsur yang lain disebabkan adanya perbedaan susunan partikel subatom yang menyusunnya.</p>
+					<p>Dalam modul ini Anda akan mempelajari beberapa teori atom dan perkembangan sistem periodik unsur. Seperti kita ketahui bahwa semua benda di alam ini tentunya dibentuk dari partikel-partikel yang amat kecil yang disebut atom. Pada perkembangannya ternyata atom bukanlah partikel yang paling kecil sebagai pembentuk suatu benda atau senyawa, akan tetapi atom terbentuk dari partikel-partikel dasar yang lebih kecil lagi. Dalam modul ini pula Anda akan dapat membandingkan beberapa pendapat para ahli tentang struktur atom.</p>
+					<p>Dari sekian banyak unsur yang ada, tentu orang akan mengalami kesulitan bila mempelajari sifat-sifat unsur tersebut. Untuk memudahkan, maka beberapa ahli mengelompokkan unsur-unsur tersebut. Pertama-tama dilakukan pengelompokan secara sederhana yaitu berdasarkan sifat kelogaman, selanjutnya pengelompokan berdasarkan kenaikan massa atomnya. Pengelompokan tersebut ternyata terdapat banyak kelemahan, akhirnya pengelompokan unsur-unsur dilakukan berdasarkan kenaikan nomor atom. Pengelompokan ini merupakan suatu kemajuan yang pesat, karena dapat mengkaitkan dengan sifat kimia, sifat fisika, dan massa unsur sekalipun masih terdapat sedikit kelemahan.</p>
+					<a data-icon="flat-none" data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>
+					<a data-icon="flat-none" data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
+					<a data-icon="flat-none" data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
+					<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
+						<marquee>Arus listrik dan Arus elektron</marquee>                        
+					</div>
+				</div>
+			</div>
+			<div  id="modelAtom-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Perkembangan Model Atom</h1>
+                </div>
+				<div data-role="content" style="font-size:14px" >
+				<h2>Model Atom Dalton</h2>
+				<p>Masa modern kimia diawali sejak proposal John Dalton tentang teori atom dalam bukunya “New system of chemical philosophy” 1808. Jauh sebelum Dalton sebenarnya beberapa teori telah diajukan oleh ilmuwan Yunani Leucippos yang dilanjutkan oleh Democritos pada abad ketiga sebelum Masehi. Akan tetapi teori Dalton ini sangat melengkapi dan lebih cocok, sehingga teori ini mampu menumbuhkan ilmu kimia.</p>
+				<p>Pada tahun 1808, John Dalton seorang ahli kimia bangsa Inggris mengemukakan gagasannya tentang atom sebagai partikel penyusun materi. Menurut teori atom Dalton:</p>
+				<p>Atom merupakan partikel terkecil yang tidak dapat dibagi lagi. Atom suatu unsur yang sama mempunyai bobot yang sama, sedang unsur yang berbeda atomnya akan berbeda pula, yang berarti mempunyai bobot berbeda. 
+				<p>Senyawa dikatakan sebagai hasil dari penggabungan atom-atom yang tidak sama dengan perbandingan bobot yang proporsional dengan bobot atom yang bergabung itu. Reaksi kimia hanya melibatkan penataulangan atom-atom sehingga tidak ada atom yang berubah akibat reaksi kimia.</p> 
+				<p>Kata atom sebenarnya berasal dari bahasa Latin atomos, yang berarti tidak terbelahkan.</p>
+				<h2>Model Atom Thomson</h2>
+				<p>Penemuan elektron atas jasa J. J Thomson dan R. Millikan pada tahun-tahun pertama abad ke-20 memberikan bukti ketidaksempurnaan model atom Dalton. J.J Thomson merinci model atom Dalton yang mengemukakan, bahwa di dalam atom terdapat elektron-elektron yang tersebar secara merata dalam “bola” bermuatan positip. Keadaannya mirip roti kismis. Kismis (diumpamakan sebagai elektron) tersebar dalam seluruh bagian dari roti (diumpamakan sebagai bola bermuatan positip).</p>
+				<h2>Model Atom Rutherford </h2>
+				<p>Rutherford mengajukan teori atomnya, yaitu :</p>
+				<p>Sebagian besar atom berupa ruang kosong, sehingga semua massa atom terpusat pada inti atom yang sangat kecil.</p>
+				<p>Atom disusun dari :</p>
+				<p>- Inti atom yang bermuatan positip.</p>
+				<p>- Elektron-elektron yang bermuatan negatif yang mengelilingi inti atom.</p>
+				<p>Seluruh proton terpusat di dalam inti atom.</p>
+				<p>Banyaknya proton di dalam inti sama dengan jumlah elektron yang mengelilingi inti atom, sehingga atom bersifat netral.</p>
+				<p>Dari teorinya, Rutherford memodelkan atom sebagaimana pada sistem tata surya, yaitu elektron-elektron bergerak mengelilingi inti atom seperti planet-planet mengitari matahari. Sebagai contoh, atom hidrogen mempunyai inti yang bermuatan +1, maka muatan ini diimbangi oleh 1 elektron yang mengitari inti.</p>
+				<p>Satu keberatan dari postulat Rutherford adalah selama elektron bergerak dalam suatu orbit, maka ada percepatan menuju ke pusat, elektron ini secara kontinyu mengemisikan radiasi dan secara berangsur-angsur akan melepaskan energi yang akhirnya akan jatuh ke dalam inti.</p>
+				<p>Hal ini adalah tidak mungkin terjadi karena atom itu stabil lagi pula model ini tidak dapat memperoleh data dari penelitian spektrum atom unsur-unsur.</p>
+				<h2>Model Atom Bohr</h2>
+				<p>Tahun 1913, Niels Bohr mengusulkan suatu model atom yang dapat dijelaskan melalui spektra hidrogen. Ia menerima konsep ini seperti yang diusulkan oleh Rutherford,akan tetapi dengan menerapkan teori kuantum radiasi seperti yang dikembangkan oleh Planck dan Einstein dalam menerangkan sifat-sifat sistem planet elektron.</p>
+				<p>Postulat Bohr berbunyi :</p>
+				<p>Elektron dalam suatu atom bergerak mengitari sekeliling inti pada orbit tertentu. Setiap orbit mempunyai tingkat energi tertentu dan energi suatu elektron adalah tetap selama berada pada orbitnya. Elektron yang berada pada tingkat ini disebut tingkat stasioner dan setiap tingkat energi dinamakan tingkat energi atau kulit. Elektron pada tingkat energi ini tidak meradiasikan energi.</p>
+				<p>Emisi dan absorpsi energi dalam bentuk radiasi hanya dapat dihasilkan jika suatu elektron pindah dari tingkat stasioner ke tingkat lainnya.</p>
+				<p>Energi tidak diemisikan atau diabsorpsi secara pelan-pelan, tetapi dalam satuan/paket h.u (disebut kuantum), dengan h adalah tetapan Planck dan u adalah frekuensi energi yang diradiasikan.</p>
+				<p>Lebih jauh tingkat energi dari inti, maka lebih besar pula energinya. Energi diabsorpsi bila elektron melompat dari orbit bagian dalam ke orbit yang lebih luar. Energi akan diemisikan bila elektron bergerak dari orbit yang luar ke orbit yang lebih dalam.</p>
+				<p>Besarnya kuantum yang diemisikan atau diabsorpsikan dapat ditentukan dari tingkat energi elektron mula-mula dan tingkat akhir setelah mencapai keadaan stasioner. Bila E2 dan E1 masing-masing adalah tingkat energi awal dan akhir, sedang ? adalah frekuensi maka :</p>
+				<p>å E = E1 – E2 = h.u</p>
+				<p>Energi yang ada pada setiap orbit dipengaruhi oleh kondisi di mana momentum anguler (m.u.r) elektron yang bergerak dalam orbitnya mempunyai nilai tertentu yang secara sederhana merupakan kelipatan dari h/2u. Dengan m = massa elektron, u = kecepatan, r = jari-jari orbit, h = tetapan Planck, dan n = orbit yang ditempati elektron (1, 2, 3, …… atau sesuai huruf K, L, M, … …. ).</p>
+				<h2>Model Atom Mekanika Gelombang</h2>
+				<p>Pada tahun 1924, Louis de Broglie ahli fisika Prancis pemenang hadiah Nobel tahun 1929, menyimpulkan bahwa elektron dalam atom dapat dipandang sebagai partikel dan gelombang. Sebagai akibat dualistis sifat elektron, Heisenberg pemenang hadiah nobel untuk bidang fisika tahun 1926 mengemukakan azas ketidakpastian, yakni tidak mungkin mengetahui secara bersamaan kedudukan dan kecepatan gerak elektron.</p>
+				<p>Dengan alasan ini lintasan elektron yang digambarkan Bohr tidak mungkin ada. Yang dapat dikatakan adalah elektron dalam atom mempunyai kebolehjadian ditemukan dalam ruang-ruang tertentu dalam atom yang disebut orbital. Gagasan bahwa elektron berada dalam orbital-orbital di seputar inti atom merupakan model atom yang mutakhir.</p>
+				<p>Pada tahun 1926, Erwin Schrodinger seorang ahli fisika Austria pemenang hadiah nobel untuk bidang fisika tahun 1933, berhasil merumuskan persamaan gelombang untuk menggambarkan gerakan elektron dalam atom. Energi dan bangun ruang orbital-orbital sebagaimana yang telah kita pelajari, diturunkan berdasarkan perhitungan dengan menggunakan persamaan gelombang Schrodinger.</p>
+				<a data-icon="flat-none" data-theme="b" href="#arus-page"  data-role="button" data-position="footer">Kembali</a>		
+				</div>
+				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
+                <marquee>Perkembangan Model Atom</marquee>                        
+                </div>
+			</div>
+			
+			<div  id="muatanListrik-page" data-role="page">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Muatan Listrik</h1>
+            </div>
+			<div data-role="content" style="font-size:14px" >
+			<p>Muatan listrik adalah muatan dasar yang dimiliki suatu benda, yang membuatnya mengalami gaya pada benda lain yang berdekatan dan juga memiliki muatan listrik. Simbol Q sering digunakan untuk menggambarkan muatan.</p> 
+			<p>Sistem Satuan Internasional dari satuan Q adalah coulomb, yang merupakan 6.24 x 1018 muatan dasar. Q adalah sifat dasar yang dimiliki oleh materi baik itu berupa proton (muatan positif) maupun elektron (muatan negatif).</p> 
+			<p>Muatan listrik total suatu atom atau materi ini bisa positif, jika atomnya kekurangan elektron. Sementara atom yang kelebihan elektron akan bermuatan negatif. Besarnya muatan tergantung dari kelebihan atau kekurangan elektron ini, oleh karena itu muatan materi/atom merupakan kelipatan dari satuan Q dasar.</p> 
+			<p>Dalam atom yang netral, jumlah proton akan sama dengan jumlah elektron yang mengelilinginya (membentuk muatan total yang netral atau tak bermuatan).</p>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
+                <marquee>Buat alur materi, alur tampilan dan link halaman</marquee>                        
+            </div>
+			</div>
+			<div  id="definisiArus-page" data-role="page">
+				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Definisi Arus</h1>
+				</div>
+				<div data-role="content" style="font-size:14px">
+				<p>Arus listrik adalah banyaknya muatan listrik yang disebabkan dari pergerakan elektron-elektron, mengalir melalui suatu titik dalam sirkuit listrik tiap satuan waktu. [1] Arus listrik dapat diukur dalam satuan Coulomb/detik atau Ampere.[1] 
+				Contoh arus listrik dalam kehidupan sehari-hari berkisar dari yang sangat lemah dalam satuan mikroAmpere ( {\displaystyle \mu A} {\displaystyle \mu A}) seperti di dalam jaringan tubuh hingga arus yang sangat kuat 1-200 kiloAmpere (kA) seperti yang terjadi pada petir.[2][3]
+				Dalam kebanyakan sirkuit arus searah dapat diasumsikan resistansi terhadap arus listrik adalah konstan sehingga besar arus yang mengalir dalam sirkuit bergantung pada voltase dan resistansi sesuai dengan hukum Ohm.[1]</p>
+				<p>Arus listrik merupakan satu dari tujuh satuan pokok dalam satuan internasional.[4] Satuan internasional untuk arus listrik adalah Ampere (A).[4] Secara formal satuan Ampere didefinisikan sebagai arus konstan yang, bila dipertahankan, akan menghasilkan gaya sebesar 2 x 10-7 Newton/meter di antara dua penghantar lurus sejajar, dengan luas penampang yang dapat diabaikan, berjarak 1 meter satu sama lain dalam ruang hampa udara.[4] </p>
+				</div>
+			</div>
+			<div  id="bahanListrik-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Bahan-bahan Listrik</h1>
+                </div>
+			</div>
+			<div  id="elemen-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Elemen pasif dan Elemen aktif</h1>
+                </div>
+			</div>
+			<div  id="rangkaian-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Rangkaian Resistif Arus Searah</h1>
+                </div>
+			</div>
+			<div  id="evaluasi-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>EVALUASI</h1>
+                </div>
+				<div data-role="content" style="font-size:14px" >
+                	<h2>Kamu Baik, Masa Lalumu Tidak</h2>
+                      
+				</div>
+            </div>
+			
+			<div  id="quiz-page" data-role="page">
+                            <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                                <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                                <h1>QUIZ</h1>
+                            </div>
+                            <div data-role="content" data-pos="center" style="font-size:20px" >Berikut adalah contoh quiz</div>
+                            <div id="quizstart">
+                             <h3>Penilaian : <br>
+                             Benar =  1 poin <br>
+                             Salah = -1 poin</h3>
+                             <button onClick="start()">M U L A I</button>                
+                            </div>
+                            <div id="question0" style="display:none">
+                            <span class=""></span><br>
+                            
+								<fieldset data-role="controlgroup">
+									<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
+									<input type="radio" name="ans0" id="radio1_0" value="" />
+									<label for="radio1_0">enam</label>
+									<input type="radio" name="ans0" id="radio1_1" value="" />
+									<label for="radio1_1">tujuh</label>
+									<input type="radio" name="ans0" id="radio1_2" value="" />
+									<label for="radio1_2">delapan</label>
+									<input type="radio" name="ans0" id="radio1_3" value="" />
+									<label for="radio1_3">sembilan</label>
+									<input type="radio" name="ans0" id="radio1_4" value="" />
+									<label for="radio1_4">sepuluh</label>
+								</fieldset>
+                                <button onClick="toggle(0,1)">Lanjut</button>
+                            </div>
+                            <div id="question1" style="display:none">
+                            <span class=""></span><br>
+                            
+								<fieldset data-role="controlgroup">
+									<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
+									<input name="ans1" type="radio" id="radio2_0" value="" />
+									<label for="radio2_0">enam</label>
+									<input type="radio" name="ans1" id="radio2_1" value="" />
+									<label for="radio2_1">tujuh</label>
+									<input type="radio" name="ans1" id="radio2_2" value="" />
+									<label for="radio2_2">delapan</label>
+									<input type="radio" name="ans1" id="radio2_3" value="" />
+									<label for="radio2_3">sembilan</label>
+									<input type="radio" name="ans1" id="radio2_4" value="" />
+									<label for="radio2_4">sepuluh</label>
+								</fieldset>
+                                <button onClick="toggle(1,2)">Lanjut</button>
+                            </div>
+                            <div id="question2" style="display:none">
+                            <span class=""></span><br>
+                            
+								<fieldset data-role="controlgroup">
+									<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
+									<input type="radio" name="ans2" id="radio3_0" value="" />
+									<label for="radio3_0">enam</label>
+									<input type="radio" name="ans2" id="radio3_1" value="" />
+									<label for="radio3_1">tujuh</label>
+									<input type="radio" name="ans2" id="radio3_2" value="" />
+									<label for="radio3_2">delapan</label>
+									<input type="radio" name="ans2" id="radio3_3" value="" />
+									<label for="radio3_3">sembilan</label>
+									<input type="radio" name="ans2" id="radio3_4" value="" />
+									<label for="radio3_4">sepuluh</label>
+								</fieldset>
+                            
+                               <button onClick="toggle(2,3)">Lanjut</button>
+                            </div>
+                            <div id="question3" style="display:none">
+                            <span class=""></span><br>
+                                <fieldset data-role="controlgroup">
+									<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
+									<input name="ans3" type="radio" id="radio4_0" value="" />
+									<label for="radio4_0">enam</label>
+									<input type="radio" name="ans3" id="radio4_1" value="" />
+									<label for="radio4_1">tujuh</label>
+									<input type="radio" name="ans3" id="radio4_2" value="" />
+									<label for="radio4_2">delapan</label>
+									<input type="radio" name="ans3" id="radio4_3" value="" />
+									<label for="radio4_3">sembilan</label>
+									<input type="radio" name="ans3" id="radio4_4" value="" />
+									<label for="radio4_4">sepuluh</label>
+                                </fieldset>
+                                <button onClick="toggle(3,4)">Lanjut</button>
+                            </div>
+                            <div id="question4" style="display:none">
+                            <span class=""></span><br>
+                                <fieldset data-role="controlgroup">
+									<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
+									<input name="ans4" type="radio" id="radio5_0" value="" />
+									<label for="radio5_0">enam</label>
+									<input type="radio" name="ans4" id="radio5_1" value="" />
+									<label for="radio5_1">tujuh</label>
+									<input type="radio" name="ans4" id="radio5_2" value="" />
+									<label for="radio5_2">delapan</label>
+									<input type="radio" name="ans4" id="radio5_3" value="" />
+									<label for="radio5_3">sembilan</label>
+									<input type="radio" name="ans4" id="radio5_4" value="" />
+									<label for="radio5_4">sepuluh</label>
+                                </fieldset>
+                                <button onClick="end(4)">Lanjut</button>
+                            </div>
+                            
+                            <div id="summary" style="display:none">
+								<h2>Nilaimu adalah :  <span id="result"></span></h2>
+								<button onClick="cobalagi()">Coba Lagi</button>
+                            </div>
+                            
+			</div>	
+			
+            <div  id="tentang-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>TENTANG PENULIS</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">
+                    <h2>Yoga Warisman</h2>
+                    
+                </div>
+				<div data-role="content"> 
+					<button onclick="enableMute()" type="button">Mute sound</button>
+					<button onclick="disableMute()" type="button">Enable sound</button>
+					<button onclick="checkMute()" type="button">Check muted status</button>
+					
+				</div>
+            </div>
+			
+			<!-- /end page  -->
+		</div>
+    
+	   <!--<script type="text/javascript" src="cordova.js"></script>-->
+        
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
