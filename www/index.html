@@ -53,6 +53,19 @@
 		function checkMute() { 
 			alert(s.muted);
 		}
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		function onDeviceReady(){
+		document.addEventListener("backbutton", function(e){
+		if($.mobile.activePage.is('#home-page')){
+           e.preventDefault();
+           navigator.app.exitApp();
+			}
+		else {
+           navigator.app.backHistory()
+			}
+				}, false);
+		}
 	</script>
 		<title>Hello World</title>
     </head>
@@ -404,8 +417,9 @@
 			<!-- /end page  -->
 		</div>
     
-	   <!--<script type="text/javascript" src="cordova.js"></script>-->
-        
+	   <!---->
+		<script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
