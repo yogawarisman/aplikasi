@@ -58,7 +58,7 @@
 		function onDeviceReady(){
 		document.addEventListener("backbutton", function(e){
 		if($.mobile.activePage.is('#home-page')){
-           e.preventDefault();
+           
            navigator.app.exitApp();
 			}
 		else {
@@ -71,6 +71,7 @@
     </head>
     <body>
         <div id="app">
+			<!-- home-page  -->
             <div id="home-page" data-role="page">
                 <div data-role="content" >
                     <div id="logoContainer" class="images">
@@ -80,8 +81,7 @@
 						<a data-icon="plus" data-theme="a" href="#silabus-page" data-role="button">SILABUS</a>
                         <a data-icon="minus" data-theme="b" href="#materi-page"  data-role="button">MATERI</a>
                         <a data-icon="bars" data-theme="c" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
-                        <a data-icon="arrow-d" data-theme="d" href="#reda-page"  data-role="button">REDA</a>
-						<a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
+                        <a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
                         <a data-icon="arrow-r" data-theme="b" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="a" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
                     	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
@@ -146,7 +146,8 @@
 					</div>
 				</div>
 			</div>
-						<div  id="materi-page" data-role="page">
+			<!-- /page  -->
+				<div  id="materi-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
@@ -259,6 +260,7 @@
 				<p>Arus listrik merupakan satu dari tujuh satuan pokok dalam satuan internasional.[4] Satuan internasional untuk arus listrik adalah Ampere (A).[4] Secara formal satuan Ampere didefinisikan sebagai arus konstan yang, bila dipertahankan, akan menghasilkan gaya sebesar 2 x 10-7 Newton/meter di antara dua penghantar lurus sejajar, dengan luas penampang yang dapat diabaikan, berjarak 1 meter satu sama lain dalam ruang hampa udara.[4] </p>
 				</div>
 			</div>
+			<!-- /page  -->
 			<div  id="bahanListrik-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -277,6 +279,7 @@
                     <h1>Rangkaian Resistif Arus Searah</h1>
                 </div>
 			</div>
+			<!-- /page  -->
 			<div  id="evaluasi-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -287,7 +290,7 @@
                       
 				</div>
             </div>
-			
+			<!-- /page  -->
 			<div  id="quiz-page" data-role="page">
                             <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                                 <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
