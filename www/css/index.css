@@ -84,6 +84,18 @@ h1 {
     padding:0px;
     text-align:center;
 }
+#atom1{
+	width:80%;
+	max-width:300px;
+	margin:15px, 0 15px;
+}
+#quizstart{
+	margin:10px;
+	text-align:center;
+	padding:4px;
+	border-width:2px;
+	border-color:#FFFFFF,2px;
+}
 
 .event {
     border-radius:4px;
