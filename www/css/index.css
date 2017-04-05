@@ -75,13 +75,21 @@ p{
     margin: 0 auto;
 	    text-align: center;
 }
-
+#keluar{margin-top:50%;
+margin-bottom:50%;}
 h1 {
     font-size:24px;
-    font-weight:normal;
+    font-weight:bold;
     margin:0px;
     overflow:visible;
     padding:0px;
+    text-align:center;
+	text-overflow: ellipsis;
+}
+.header{
+	min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; 
+}
+.centerText{
     text-align:center;
 }
 #atom1{
