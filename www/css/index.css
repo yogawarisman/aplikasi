@@ -92,7 +92,7 @@ h1 {
 .centerText{
     text-align:center;
 }
-#atom1{
+.atom{
 	width:80%;
 	max-width:300px;
 	margin:15px, 0 15px;
