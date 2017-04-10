@@ -10,6 +10,8 @@
 		<!--
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+		cek sinkronasi, apakah kalimat yang ditulis ini muncul di github.com
+		setelah ditulis beberapa baris, ada delay koneksi dan sinkronasi.
 		-->
 		<link rel="stylesheet" type="text/css" href=""/>
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
@@ -18,6 +20,7 @@
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="libs/fastclick.min.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
 		<script>
 			//0=a; 1=b; 2=c; 3=d; 4=e; 
  			correctAnswers=[0,1,2,3,4];
@@ -51,27 +54,33 @@
 		function checkMute() { 
 			alert(s.muted);
 		}
+		
+		
+		function onBackKeyDown(){
+			navigator.app.backHistory();
+		}
+		
 	</script>
 		<title>Hello World</title>
     </head>
     <body>
         <div id="app">
+			<!-- home-page  -->
             <div id="home-page" data-role="page">
                 <div data-role="content" >
                     <div id="logoContainer" class="images">
                             <img src="img/logo.png" id="logo"  />
                     </div>
                     <div id="menu">
-						<a data-icon="plus" data-theme="a" href="#silabus-page" data-role="button">SILABUS</a>
-                        <a data-icon="minus" data-theme="b" href="#materi-page"  data-role="button">MATERI</a>
-                        <a data-icon="bars" data-theme="c" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
-                        <a data-icon="arrow-d" data-theme="d" href="#reda-page"  data-role="button">REDA</a>
-						<a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
-                        <a data-icon="arrow-r" data-theme="b" href="#tentang-page"  data-role="button">TENTANG</a>
-                        <a data-icon="delete" data-theme="a" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
+						<a data-icon="plus" data-theme="b" href="#silabus-page" data-role="button">SILABUS</a>
+                        <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>
+                        <a data-icon="bars" data-theme="a" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
+                        <a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
+                        <a data-icon="arrow-r" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
+                        <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
                     	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
-							<div data-role="header" data-theme="a" class="ui-corner-top">
-								<h1>Yakin Keluar?</h1>                        
+							<div data-role="header" data-theme="a" class="ui-corner-top" >
+								<h1>Keluar?</h1>                        
 							</div>
 							<div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">
 							<a data-icon="delete" href="#home-page" data-role="button" data-inline="true" data-rel="back" data-theme="b" >Tidak</a>
@@ -131,7 +140,8 @@
 					</div>
 				</div>
 			</div>
-						<div  id="materi-page" data-role="page">
+			<!-- /page  -->
+				<div  id="materi-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
@@ -157,15 +167,15 @@
 				<div data-role="content" style="font-size:14px" >
 					<h2>Atom</h2>
 					<div data-role="content" class="centerText">
-						<img src="img/atom.jpg" id="atom1"/>
+						<img src="img/atom.jpg" class="atom"/>
 					</div>
 					<p>Pengertian Atom adalah partikel terkecil penyusun materi. Atom terdiri atas beberapa partikel dasar, yaitu elektron, proton, dan neutron. Adanya partikel-partikel inilah yang menyebabkan atom mempunyai sifat listrik, sebab elektron bermuatan negatif, proton bermuatan positif, dan neutron tidak bermuatan.</p>
 					<p>Atom unsur yang satu berbeda dengan atom unsur yang lain disebabkan adanya perbedaan susunan partikel subatom yang menyusunnya.</p>
 					<p>Dalam modul ini Anda akan mempelajari beberapa teori atom dan perkembangan sistem periodik unsur. Seperti kita ketahui bahwa semua benda di alam ini tentunya dibentuk dari partikel-partikel yang amat kecil yang disebut atom. Pada perkembangannya ternyata atom bukanlah partikel yang paling kecil sebagai pembentuk suatu benda atau senyawa, akan tetapi atom terbentuk dari partikel-partikel dasar yang lebih kecil lagi. Dalam modul ini pula Anda akan dapat membandingkan beberapa pendapat para ahli tentang struktur atom.</p>
 					<p>Dari sekian banyak unsur yang ada, tentu orang akan mengalami kesulitan bila mempelajari sifat-sifat unsur tersebut. Untuk memudahkan, maka beberapa ahli mengelompokkan unsur-unsur tersebut. Pertama-tama dilakukan pengelompokan secara sederhana yaitu berdasarkan sifat kelogaman, selanjutnya pengelompokan berdasarkan kenaikan massa atomnya. Pengelompokan tersebut ternyata terdapat banyak kelemahan, akhirnya pengelompokan unsur-unsur dilakukan berdasarkan kenaikan nomor atom. Pengelompokan ini merupakan suatu kemajuan yang pesat, karena dapat mengkaitkan dengan sifat kimia, sifat fisika, dan massa unsur sekalipun masih terdapat sedikit kelemahan.</p>
-					<a data-icon="flat-none" data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>
-					<a data-icon="flat-none" data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
-					<a data-icon="flat-none" data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
+					<a  data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>
+					<a  data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
+					<a  data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
 					<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
 						<marquee>Arus listrik dan Arus elektron</marquee>                        
 					</div>
@@ -178,12 +188,18 @@
                 </div>
 				<div data-role="content" style="font-size:14px" >
 				<h2>Model Atom Dalton</h2>
+				<div data-role="content" class="centerText">
+						<img src="img/dalton.jpg" class="atom"/>
+				</div>
 				<p>Masa modern kimia diawali sejak proposal John Dalton tentang teori atom dalam bukunya “New system of chemical philosophy” 1808. Jauh sebelum Dalton sebenarnya beberapa teori telah diajukan oleh ilmuwan Yunani Leucippos yang dilanjutkan oleh Democritos pada abad ketiga sebelum Masehi. Akan tetapi teori Dalton ini sangat melengkapi dan lebih cocok, sehingga teori ini mampu menumbuhkan ilmu kimia.</p>
 				<p>Pada tahun 1808, John Dalton seorang ahli kimia bangsa Inggris mengemukakan gagasannya tentang atom sebagai partikel penyusun materi. Menurut teori atom Dalton:</p>
 				<p>Atom merupakan partikel terkecil yang tidak dapat dibagi lagi. Atom suatu unsur yang sama mempunyai bobot yang sama, sedang unsur yang berbeda atomnya akan berbeda pula, yang berarti mempunyai bobot berbeda. 
 				<p>Senyawa dikatakan sebagai hasil dari penggabungan atom-atom yang tidak sama dengan perbandingan bobot yang proporsional dengan bobot atom yang bergabung itu. Reaksi kimia hanya melibatkan penataulangan atom-atom sehingga tidak ada atom yang berubah akibat reaksi kimia.</p> 
 				<p>Kata atom sebenarnya berasal dari bahasa Latin atomos, yang berarti tidak terbelahkan.</p>
 				<h2>Model Atom Thomson</h2>
+				<div data-role="content" class="centerText">
+						<img src="img/thomson.png" class="atom"/>
+				</div>
 				<p>Penemuan elektron atas jasa J. J Thomson dan R. Millikan pada tahun-tahun pertama abad ke-20 memberikan bukti ketidaksempurnaan model atom Dalton. J.J Thomson merinci model atom Dalton yang mengemukakan, bahwa di dalam atom terdapat elektron-elektron yang tersebar secara merata dalam “bola” bermuatan positip. Keadaannya mirip roti kismis. Kismis (diumpamakan sebagai elektron) tersebar dalam seluruh bagian dari roti (diumpamakan sebagai bola bermuatan positip).</p>
 				<h2>Model Atom Rutherford </h2>
 				<p>Rutherford mengajukan teori atomnya, yaitu :</p>
@@ -197,6 +213,9 @@
 				<p>Satu keberatan dari postulat Rutherford adalah selama elektron bergerak dalam suatu orbit, maka ada percepatan menuju ke pusat, elektron ini secara kontinyu mengemisikan radiasi dan secara berangsur-angsur akan melepaskan energi yang akhirnya akan jatuh ke dalam inti.</p>
 				<p>Hal ini adalah tidak mungkin terjadi karena atom itu stabil lagi pula model ini tidak dapat memperoleh data dari penelitian spektrum atom unsur-unsur.</p>
 				<h2>Model Atom Bohr</h2>
+				<div data-role="content" class="centerText">
+						<img src="img/bohr.jpg" class="atom"/>
+				</div>
 				<p>Tahun 1913, Niels Bohr mengusulkan suatu model atom yang dapat dijelaskan melalui spektra hidrogen. Ia menerima konsep ini seperti yang diusulkan oleh Rutherford,akan tetapi dengan menerapkan teori kuantum radiasi seperti yang dikembangkan oleh Planck dan Einstein dalam menerangkan sifat-sifat sistem planet elektron.</p>
 				<p>Postulat Bohr berbunyi :</p>
 				<p>Elektron dalam suatu atom bergerak mengitari sekeliling inti pada orbit tertentu. Setiap orbit mempunyai tingkat energi tertentu dan energi suatu elektron adalah tetap selama berada pada orbitnya. Elektron yang berada pada tingkat ini disebut tingkat stasioner dan setiap tingkat energi dinamakan tingkat energi atau kulit. Elektron pada tingkat energi ini tidak meradiasikan energi.</p>
@@ -244,6 +263,7 @@
 				<p>Arus listrik merupakan satu dari tujuh satuan pokok dalam satuan internasional.[4] Satuan internasional untuk arus listrik adalah Ampere (A).[4] Secara formal satuan Ampere didefinisikan sebagai arus konstan yang, bila dipertahankan, akan menghasilkan gaya sebesar 2 x 10-7 Newton/meter di antara dua penghantar lurus sejajar, dengan luas penampang yang dapat diabaikan, berjarak 1 meter satu sama lain dalam ruang hampa udara.[4] </p>
 				</div>
 			</div>
+			<!-- /page  -->
 			<div  id="bahanListrik-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -262,6 +282,7 @@
                     <h1>Rangkaian Resistif Arus Searah</h1>
                 </div>
 			</div>
+			<!-- /page  -->
 			<div  id="evaluasi-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -272,7 +293,7 @@
                       
 				</div>
             </div>
-			
+			<!-- /page  -->
 			<div  id="quiz-page" data-role="page">
                             <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                                 <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -402,8 +423,8 @@
 			<!-- /end page  -->
 		</div>
     
-	   <!--<script type="text/javascript" src="cordova.js"></script>-->
-        
+	   <!---->
+		
         <script type="text/javascript">
             app.initialize();
         </script>
