@@ -14,10 +14,17 @@
 		setelah ditulis beberapa baris, ada delay koneksi dan sinkronasi.
 		-->
 		<link rel="stylesheet" type="text/css" href=""/>
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />		
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+=======
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+>>>>>>> parent of 9445b44... update
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="libs/fastclick.min.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script>
@@ -285,20 +292,18 @@
                     <a href="#materi-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Elemen pasif dan Elemen aktif</h1>
                 </div>
-				<div data-role="content">				
-				<ul data-role="listview" data-inset="true" data-theme="b" >
-				    <li >Elemen Pasif</li>
-					<li data-theme="a"><a href="#resistor-page">Resistor dan Resistansi</a></li>
-					<li data-theme="a"><a href="#induktor-page">Induktor dan Induktansi</a></li>
-					<li data-theme="a"><a href="#kapasitor-page">Kapasitor dan Kapasitansi</a></li>
-					<li data-theme="a"><a href="">Sent </a></li>
-				</ul>
-				<ul data-role="listview" data-inset="true" data-theme="b" >
-				    <li >Elemen Aktif</li>
-					<li data-theme="a"><a href="">Resistor dan Resistansi</a></li>
-					<li data-theme="a"><a href="">Induktor dan Induktansi</a></li>
-					<li data-theme="a"><a href="">Kapasitor dan Kapasitansi</a></li>
-					<li data-theme="a"><a href="">Sent </a></li>
+				<div data-role="content">
+				<button class="ui-btn ui-btn-b ui-corner-all">Elemen Pasif</button>
+				<a  data-theme="a" href="#resistor-page"  data-role="button">Resistor dan Resistansi</a>
+				<a  data-theme="a" href="#induktor-page"  data-role="button">Induktor dan Induktansi</a>
+				<a  data-theme="a" href="#kapasitor-page"  data-role="button">Kapasitor dan Kapasitansi</a>
+				<ul data-role="listview" data-inset="true" data-theme="a" >
+				    <li >Divider</li>
+				    <li><a href="">Sent </a></li>
+					<li><a href="">Sent </a></li>
+					<li><a href="">Sent </a></li>
+					<li><a href="">Sent </a></li>
+					<li><a href="">Sent </a></li>
 				</ul>
 				</div>
 			</div>
@@ -333,10 +338,6 @@
                     <h1>Induktor dan Induktansi</h1>
                 </div>
 				<div data-role="content" style="font-size:14px">
-				<ul data-role="listview" data-inset="true" data-theme="b" >
-				    <li >Elemen Pasif</li>
-					<li data-theme="a"><a href="">Sent </a></li>
-				</ul>
 				</div>
 			</div>
 			<!-- /page  -->
@@ -372,8 +373,7 @@
                                 <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                                 <h1>QUIZ</h1>
                             </div>
-							<div data-role="content">
-                            <div data-pos="center" style="font-size:20px" >Berikut adalah contoh quiz</div>
+                            <div data-role="content" data-pos="center" style="font-size:20px" >Berikut adalah contoh quiz</div>
                             <div id="quizstart">
                              <h3>Penilaian : <br>
                              Benar =  1 poin <br>
@@ -474,7 +474,7 @@
 								<h2>Nilaimu adalah :  <span id="result"></span></h2>
 								<button onClick="cobalagi()">Coba Lagi</button>
                             </div>
-                        </div>    
+                            
 			</div>	
 			
             <div  id="tentang-page" data-role="page">
@@ -499,7 +499,10 @@
     
 	   <!---->
 		
+<<<<<<< HEAD
 		<script type="text/javascript" src="libs/fastclick.min.js"></script>
+=======
+>>>>>>> parent of 9445b44... update
         <script type="text/javascript">
             app.initialize();
         </script>
