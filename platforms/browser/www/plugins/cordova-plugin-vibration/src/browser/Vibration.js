@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-splashscreen.SplashScreen", function(require, exports, module) { /*
+cordova.define("cordova-plugin-vibration.Vibration", function(require, exports, module) { /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,17 +19,11 @@ cordova.define("cordova-plugin-splashscreen.SplashScreen", function(require, exp
  *
 */
 
-var exec = require('cordova/exec');
-
-var splashscreen = {
-    show:function() {
-        exec(null, null, "SplashScreen", "show", []);
-    },
-    hide:function() {
-        exec(null, null, "SplashScreen", "hide", []);
+module.exports = {
+    vibrate: function(success, fail, milliseconds) {
+        console.log('Vibration is not supported');
+        return false;
     }
 };
-
-module.exports = splashscreen;
 
 });

@@ -1,5 +1,4 @@
-cordova.define("cordova-plugin-splashscreen.SplashScreen", function(require, exports, module) { /*
- *
+cordova.define("cordova-plugin-statusbar.statusbar.Browser", function(require, exports, module) { /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -17,19 +16,26 @@ cordova.define("cordova-plugin-splashscreen.SplashScreen", function(require, exp
  * specific language governing permissions and limitations
  * under the License.
  *
-*/
+ */
 
-var exec = require('cordova/exec');
+function notSupported() {
+    console.log('StatusBar is not supported');
+    return false;
+}
 
-var splashscreen = {
-    show:function() {
-        exec(null, null, "SplashScreen", "show", []);
-    },
-    hide:function() {
-        exec(null, null, "SplashScreen", "hide", []);
-    }
+module.exports = {
+    isVisible: false,
+    styleBlackTranslucent:notSupported,
+    styleDefault:notSupported,
+    styleLightContent:notSupported,
+    styleBlackOpaque:notSupported,
+    overlaysWebView:notSupported,
+    styleLightContect: notSupported,
+    backgroundColorByName: notSupported,
+    backgroundColorByHexString: notSupported,
+    hide: notSupported,
+    show: notSupported
 };
 
-module.exports = splashscreen;
 
 });
