@@ -58,7 +58,7 @@
 		}
 		
 	</script>
-		<title>Hello World</title>
+		<title>Aplikasi Android Arus Listrik</title>
     </head>
     <body>
         <div id="app">
@@ -69,7 +69,7 @@
                             <img src="img/logo.png" id="logo"  />
                     </div>
                     <div id="menu">
-						<a data-icon="plus" data-theme="b" href="#silabus-page" data-role="button">SILABUS</a>
+						<a data-icon="plus" data-theme="b" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
                         <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>
                         <a data-icon="bars" data-theme="a" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
                         <a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
@@ -91,16 +91,37 @@
 			<!-- /page  -->
 			 <div  id="silabus-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
-                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <a href="#home-page" data-transition="slide" data-direction="reverse" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Silabus</h1>
                 </div>
                 <div data-role="content" style="font-size:14px" id="silabus">
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
-					    <h4>Arus listrik dan arus elektron</h4>
+					    <h4>KOMPETENSI DASAR</h4>
 					    <ul data-role="listview" data-inset="false">
-					        <li>muatan listrik</li>
-					        <li>definisi arus</li>
-					        <li>Read-only list item 3</li>
+					        <li>Menganalisis rangkaian listrik arus searah</li>					        
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>INDIKATOR</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>1. Hukum - hukum dasar kelistrikan dijelaskan sesuai konsep rangkaian listrik</li>
+							<li>2. Rangkaian listrik seri, paralel, seri-paralel disederhanakan berdasarkan hukum kelistrikan</li>        
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>TUJUAN PEMBELAJARAN</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>1. Siswa dapat menjelaskan hukum-hukum dasar kelistrikan sesuai konsep rangkaian listrik</li>
+							<li>2. Siswa dapat menyederhanakan rangkaian listrik seri, paralel, seri-paralel, bintang dan segitiga sesuai dengan hukum kelistrikan</li>        
+					    </ul>
+					</div>
+					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+					    <h4>MATERI POKOK</h4>
+					    <ul data-role="listview" data-inset="false">
+					        <li>1. Hukum Ohm</li>
+							<li>2. Hukum Kirchoff I</li>
+							<li>3. Hukum Kirchoff II</li>
+							<li>4. Penyederhanaan rangkaian seri, paralel, seri-paralel</li>        
 					    </ul>
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
@@ -142,17 +163,21 @@
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
-                </div>
+                </div>				
 				<a data-icon="arrow-r"    href="#arus-page" data-role="button">Arus listrik dan arus elektron</a>
                 <a data-icon="arrow-r"  href="#bahanListrik-page"  data-role="button">Bahan-bahan listrik</a>
                 <a data-icon="arrow-r"  href="#elemen-page"  data-role="button">Elemen pasif dan Elemen aktif</a>
                 <a data-icon="arrow-r"  href="#rangkaian-page"  data-role="button">Rangkaian resistif arus searah</a>
+				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Ohm</a>
+				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Kirchoff I</a>
+				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Kirchof II</a>
+				<a data-icon="arrow-r"  href="#"  data-role="button">Analisa Rangkaian</a>
                 <div data-role="content" style="font-size:14px" >
 			                 
                 </div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
-                <marquee>tulisan berjalan, tulisan berjalan</marquee>                        
-                </div>
+						<marquee></marquee>                        
+				</div>
             </div>
 			<!-- /page  -->
 			<div  id="arus-page" data-role="page">
@@ -320,9 +345,7 @@
 					<li>Suhu konduktor</li>
 				</ul>
 				<p>Besarnya nilai resistansi suatu bahan konduktor dapat dihitung dengan menggunakan persamaan :</p>
-				<div>
-					<img src="img/Rumus.jpg" />
-				</div>
+				
 				<p>dimana : </p>
 				<p>R : resistansi konduktor, diukur dalam satuan ohm </p>
 				<p>ρ : resistivitas bahan, dalam satuan ohm.mm2/m </p>
@@ -339,10 +362,7 @@
 				<p>di mana</p>
 				<p>α adalah konstanta yang disebut sebagai koefisien suhu</p>
 				<p>dt adalah besarnya kenaikan suhu (t1 – t0)</p>
-				<p>Sehingga dapat dituliskan:</p>
-				<div>
-					<img src="img/Res2.png" />
-				</div>
+				<p>Sehingga dapat dituliskan:</p>		
 				<p>Pengaruh suhu ini ternyata juga terjadi pada nilai resistivitas bahan konduktor dari logam (timbal, sodium, tembaga dan alumunium). Misalkan pada t0 nilai resitivitasnya adalah ρ0, maka pada t1 menjadi ρ1.</p>
 				</div>
 			</div>
@@ -537,8 +557,10 @@
 					
 					<div id="summary" style="display:none">
 						<h2>Nilaimu adalah :  <span id="result"></span></h2>
-						<button onClick="cobalagi()">Coba Lagi</button>
+						<button onClick="cobalagi()">COBA LAGI</button>
+						<a href="#" data-role="button" >Pembahasan</a>
 					</div>
+					
 				</div>
 			</div>	
 			
