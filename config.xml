@@ -10,6 +10,7 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+	<preference name="SplashScreenSpinnerColor" value="white" />
 	<!--
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
@@ -32,6 +33,7 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	
     <platform name="android">
 		<preference name="loadUrlTimeoutValue" value="700000" />
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
