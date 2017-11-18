@@ -77,6 +77,11 @@ p{
 }
 #keluar{margin-top:50%;
 margin-bottom:50%;}
+#atomgif{
+    display: block;
+    margin: 0 auto;
+	    text-align: center;
+}
 h1 {
     font-size:24px;
     font-weight:bold;
