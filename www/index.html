@@ -7,11 +7,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
-		<!--
-		cek sinkronasi, apakah kalimat yang ditulis ini muncul di github.com
-		setelah ditulis beberapa baris, ada delay koneksi dan sinkronasi.
-		-->		
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />		
 		<script type="text/javascript" src="libs/fastclick.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
@@ -67,10 +63,10 @@
                             <img src="img/animation.gif" id="logo"  />
                     </div>
                     <div id="menu">
-						<a data-icon="plus" data-theme="b" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
+						<a data-icon="plus" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
                         <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>
                         <a data-icon="bars" data-theme="a" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
-                        <a data-icon="arrow-u" data-theme="a" href="#quiz-page"  data-role="button">QUIZ</a>
+                        <a data-icon="arrow-u" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
                         <a data-icon="arrow-r" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
                     	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
@@ -95,51 +91,27 @@
                 <div data-role="content" style="font-size:14px" id="silabus">
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>KOMPETENSI DASAR</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>Mendiskripsikan Konsep Rangkaian Listrik</li>					        
-					    </ul>
+						<p>Mendiskripsikan Konsep Rangkaian Listrik</p>							    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>INDIKATOR</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>Struktur atom, bagian-bagian dari atom, hole , dan elektron bebas dijelaskan berkaitan dengan teknik kelistrikan</li>
-							<li>Konsep rangkaian listrik dipahami sesuai dengan bahan ajar</li>        
-					    </ul>
+						<p>1. Struktur atom, bagian-bagian dari atom, hole , dan elektron bebas dijelaskan berkaitan dengan teknik kelistrikan</p>
+						<p>2. Konsep rangkaian listrik dipahami sesuai dengan bahan ajar</p>
+					    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>TUJUAN PEMBELAJARAN</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>1. Siswa dapat menjelaskan struktur atom, bagian-bagian dari atom, hole, dan elektron bebas berkaitan dengan teknik kelistrikan</li>
-							<li>2. Siswa dapat memahami konsep rangkaian listrik sesuai bahan ajar</li>        
-					    </ul>
+						<p>1. Siswa dapat menjelaskan struktur atom, bagian-bagian dari atom, hole, dan elektron bebas berkaitan dengan teknik kelistrikan</p>
+						<p>2. Siswa dapat memahami konsep rangkaian listrik sesuai bahan ajar</p>					    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>MATERI POKOK</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>1. struktur Atom</li>
-							<li>2. hole</li>
-							<li>3. elektron bebas</li>
-							<li>4. arus listrik</li>        
-					    </ul>
-					</div>
-					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
-					    <h4>Bahan-bahan listrik,</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>konduktor</li>
-					        <li>isolator</li>
-					        <li>bahan semikonduktor</li>
-					    </ul>
-					</div>
-					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
-					    <h4>Elemen pasif</h4>
-					    <ul data-role="listview" data-inset="false">
-					        <li>resistor dan resistansi</li>
-					        <li>induktor dan induktansi</li>
-					        <li>kapasitor dan kapasitansi</li>
-					    </ul>
-					</div>
-					
-					
+						<p>1. Struktur Atom</p>
+						<p>2. Hole</p>
+						<p>3. Elektron Bebas</p>
+						<p>4. Arus Listrik</p>
+					    
+					</div>									
 				</div>
 			</div>
 			<!-- /page  -->
@@ -170,12 +142,15 @@
                     <h1>Arus listrik dan Arus elektron</h1>
                 </div>
 				<div data-role="content" style="font-size:14px" >
-					<h2>Atom</h2>
+					<h2 class="centerText">Atom</h2>
 					<div data-role="content" class="centerText">
 						<img src="img/atom.jpg" class="atom"/>
 					</div>
-					<p>Pengertian Atom adalah partikel terkecil penyusun materi. Atom terdiri atas beberapa partikel dasar, yaitu elektron, proton, dan neutron. Adanya partikel-partikel inilah yang menyebabkan atom mempunyai sifat listrik, sebab elektron bermuatan negatif, proton bermuatan positif, dan neutron tidak bermuatan.</p>
+					<p>Istilah atom berasal dari Bahasa Yunani, yang berarti tidak dapat dipotong ataupun sesuatu yang tidak dapat dibagi-bagi lagi. Konsep atom sebagai komponen yang tak dapat dibagi-bagi lagi</p>
+					<p>Struktur atom merupakan satuan dasar materi yang terdiri dari inti atom beserta awan elektron bermuatan negatif yang mengelilinginya. Inti atom mengandung campuran proton yang bermuatan positif dan neutron yang bermuatan netral. Elektron-elektron pada sebuah atom terikat pada inti atom oleh gaya elektromagnetik. Demikian pula sekumpulan atom dapat berikatan satu sama lainnya membentuk sebuah molekul. </p>
+					<p>Atom yang mengandung jumlah proton dan elektron yang sama bersifat netral, sedangkan yang mengandung jumlah proton dan elektron yang berbeda bersifat positif atau negatif dan merupakan ion. Atom dikelompokkan berdasarkan jumlah proton dan neutron pada inti atom tersebut. Jumlah proton pada atom menentukan unsur kimia atom tersebut, dan jumlah neutron menentukan isotop unsur tersebut.</p>
 					<p>Atom unsur yang satu berbeda dengan atom unsur yang lain disebabkan adanya perbedaan susunan partikel subatom yang menyusunnya.</p>
+					<p></p>
 					<p>Dalam modul ini Anda akan mempelajari beberapa teori atom dan perkembangan sistem periodik unsur. Seperti kita ketahui bahwa semua benda di alam ini tentunya dibentuk dari partikel-partikel yang amat kecil yang disebut atom. Pada perkembangannya ternyata atom bukanlah partikel yang paling kecil sebagai pembentuk suatu benda atau senyawa, akan tetapi atom terbentuk dari partikel-partikel dasar yang lebih kecil lagi. Dalam modul ini pula Anda akan dapat membandingkan beberapa pendapat para ahli tentang struktur atom.</p>
 					<p>Dari sekian banyak unsur yang ada, tentu orang akan mengalami kesulitan bila mempelajari sifat-sifat unsur tersebut. Untuk memudahkan, maka beberapa ahli mengelompokkan unsur-unsur tersebut. Pertama-tama dilakukan pengelompokan secara sederhana yaitu berdasarkan sifat kelogaman, selanjutnya pengelompokan berdasarkan kenaikan massa atomnya. Pengelompokan tersebut ternyata terdapat banyak kelemahan, akhirnya pengelompokan unsur-unsur dilakukan berdasarkan kenaikan nomor atom. Pengelompokan ini merupakan suatu kemajuan yang pesat, karena dapat mengkaitkan dengan sifat kimia, sifat fisika, dan massa unsur sekalipun masih terdapat sedikit kelemahan.</p>
 					<a  data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>
@@ -440,7 +415,7 @@
 			<!-- /page  -->
 			<div  id="quiz-page" data-role="page">
 				<div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
-					<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+					<a href="#home-page" data-transition="slideup" data-direction="reverse" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 					<h1>QUIZ</h1>
 				</div>
 				<div data-role="content">
@@ -568,13 +543,7 @@
 					<button onclick="disableMute()" type="button">Enable sound</button>
 					<button onclick="checkMute()" type="button">Check muted status</button>
 					
-				</div>
-				<div class="centerText">
-					
-					<img src="img/images/hex13.jpg" />
-					<img src="img/images/hex14.jpg" />
-					<img src="img/images/hex15.jpg" />
-				</div>
+				</div>				
             </div>
 			
 			<!-- /end page  -->
