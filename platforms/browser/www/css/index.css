@@ -77,6 +77,14 @@ p{
 }
 #keluar{margin-top:50%;
 margin-bottom:50%;}
+#home-page{
+	background-color:white;
+}
+#atomgif{
+    display: block;
+    margin: 0 auto;
+	    text-align: center;
+}
 h1 {
     font-size:24px;
     font-weight:bold;
@@ -96,6 +104,11 @@ h1 {
 	width:80%;
 	max-width:300px;
 	margin:15px, 0 15px;
+}
+#periodik{
+	width:100%;
+	max-width:500px;
+	margin:5px, 0 5px;
 }
 #quizstart{
 	margin:10px;

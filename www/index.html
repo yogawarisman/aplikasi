@@ -35,16 +35,7 @@
 				location.reload(true);
 				AnsweredCorrectly=0;
 			}	
-		var s = document.getElementById('myAudio');
-		function enableMute() { 
-			s.muted = true;
-		} 
-		function disableMute() { 
-			s.muted = false;
-		}
-		function checkMute() { 
-			alert(s.muted);
-		}
+		
 		
 		
 		function onBackKeyDown(){
@@ -65,7 +56,7 @@
                     <div id="menu">
 						<a data-icon="plus" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
                         <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>
-                        <a data-icon="bars" data-theme="a" href="#evaluasi-page"  data-role="button">EVALUASI</a>                        
+						<a data-icon="minus" data-theme="a" href="#konsep-page"  data-role="button">KONSEP ARUS LISTRIK</a>
                         <a data-icon="arrow-u" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
                         <a data-icon="arrow-r" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
@@ -120,26 +111,21 @@
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
                 </div>				
-				<a data-icon="arrow-r"    href="#arus-page" data-role="button">Arus listrik dan arus elektron</a>
-                <a data-icon="arrow-r"  href="#bahanListrik-page"  data-role="button">Bahan-bahan listrik</a>
-                <a data-icon="arrow-r"  href="#elemen-page"  data-role="button">Elemen pasif dan Elemen aktif</a>
-                <a data-icon="arrow-r"  href="#rangkaian-page"  data-role="button">Rangkaian resistif arus searah</a>
-				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Ohm</a>
-				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Kirchoff I</a>
-				<a data-icon="arrow-r"  href="#"  data-role="button">Hukum Kirchof II</a>
-				<a data-icon="arrow-r"  href="#"  data-role="button">Analisa Rangkaian</a>
-                <div data-role="content" style="font-size:14px" >
-			                 
-                </div>
+				<a data-icon="arrow-r"    href="#atom-page" data-role="button">Struktur Atom</a>                                
+				<a  data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
+				<a  data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
+                <div data-role="content" style="font-size:14px" >			                 
+                
+				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
 						<marquee></marquee>                        
 				</div>
             </div>
 			<!-- /page  -->
-			<div  id="arus-page" data-role="page">
+			<div  id="atom-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#materi-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Arus listrik dan Arus elektron</h1>
+                    <a href="#materi-page" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Struktur Atom</h1>
                 </div>
 				<div data-role="content" style="font-size:14px" >
 					<h2 class="centerText">Atom</h2>
@@ -153,9 +139,7 @@
 					<p></p>
 					<p>Dalam modul ini Anda akan mempelajari beberapa teori atom dan perkembangan sistem periodik unsur. Seperti kita ketahui bahwa semua benda di alam ini tentunya dibentuk dari partikel-partikel yang amat kecil yang disebut atom. Pada perkembangannya ternyata atom bukanlah partikel yang paling kecil sebagai pembentuk suatu benda atau senyawa, akan tetapi atom terbentuk dari partikel-partikel dasar yang lebih kecil lagi. Dalam modul ini pula Anda akan dapat membandingkan beberapa pendapat para ahli tentang struktur atom.</p>
 					<p>Dari sekian banyak unsur yang ada, tentu orang akan mengalami kesulitan bila mempelajari sifat-sifat unsur tersebut. Untuk memudahkan, maka beberapa ahli mengelompokkan unsur-unsur tersebut. Pertama-tama dilakukan pengelompokan secara sederhana yaitu berdasarkan sifat kelogaman, selanjutnya pengelompokan berdasarkan kenaikan massa atomnya. Pengelompokan tersebut ternyata terdapat banyak kelemahan, akhirnya pengelompokan unsur-unsur dilakukan berdasarkan kenaikan nomor atom. Pengelompokan ini merupakan suatu kemajuan yang pesat, karena dapat mengkaitkan dengan sifat kimia, sifat fisika, dan massa unsur sekalipun masih terdapat sedikit kelemahan.</p>
-					<a  data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>
-					<a  data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
-					<a  data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
+					<a  data-theme="b" href="#modelAtom-page"  data-role="button" >Perkembangan Model Atom</a>					
 					<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
 						<marquee>Arus listrik dan Arus elektron</marquee>                        
 					</div>
@@ -164,7 +148,7 @@
 			<!-- /page  -->
 			<div  id="modelAtom-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <a href="#atom-page" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Perkembangan Model Atom</h1>
                 </div>
 				<div data-role="content" style="font-size:14px" >
@@ -210,7 +194,7 @@
 				<p>Pada tahun 1924, Louis de Broglie ahli fisika Prancis pemenang hadiah Nobel tahun 1929, menyimpulkan bahwa elektron dalam atom dapat dipandang sebagai partikel dan gelombang. Sebagai akibat dualistis sifat elektron, Heisenberg pemenang hadiah nobel untuk bidang fisika tahun 1926 mengemukakan azas ketidakpastian, yakni tidak mungkin mengetahui secara bersamaan kedudukan dan kecepatan gerak elektron.</p>
 				<p>Dengan alasan ini lintasan elektron yang digambarkan Bohr tidak mungkin ada. Yang dapat dikatakan adalah elektron dalam atom mempunyai kebolehjadian ditemukan dalam ruang-ruang tertentu dalam atom yang disebut orbital. Gagasan bahwa elektron berada dalam orbital-orbital di seputar inti atom merupakan model atom yang mutakhir.</p>
 				<p>Pada tahun 1926, Erwin Schrodinger seorang ahli fisika Austria pemenang hadiah nobel untuk bidang fisika tahun 1933, berhasil merumuskan persamaan gelombang untuk menggambarkan gerakan elektron dalam atom. Energi dan bangun ruang orbital-orbital sebagaimana yang telah kita pelajari, diturunkan berdasarkan perhitungan dengan menggunakan persamaan gelombang Schrodinger.</p>
-				<a  data-theme="b" href="#arus-page"  data-role="button" data-position="footer">Kembali</a>		
+				<a  data-theme="b" href="#atom-page"  data-role="button" data-position="footer">Kembali</a>		
 				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
 					<marquee>Perkembangan Model Atom</marquee>                       
@@ -240,12 +224,12 @@
 				</div>
 				<div data-role="content" style="font-size:14px">
 				<p>Arus listrik adalah banyaknya muatan listrik yang disebabkan dari pergerakan elektron-elektron, mengalir melalui suatu titik dalam sirkuit listrik tiap satuan waktu. [1] Arus listrik dapat diukur dalam satuan Coulomb/detik atau Ampere.[1] 
-				Contoh arus listrik dalam kehidupan sehari-hari berkisar dari yang sangat lemah dalam satuan mikroAmpere ( {\displaystyle \mu A} {\displaystyle \mu A}) seperti di dalam jaringan tubuh hingga arus yang sangat kuat 1-200 kiloAmpere (kA) seperti yang terjadi pada petir.[2][3]
+				Contoh arus listrik dalam kehidupan sehari-hari berkisar dari yang sangat lemah dalam satuan mikroAmpere <span>&#181;</span>A  seperti di dalam jaringan tubuh hingga arus yang sangat kuat 1-200 kiloAmpere (kA) seperti yang terjadi pada petir.[2][3]
 				Dalam kebanyakan sirkuit arus searah dapat diasumsikan resistansi terhadap arus listrik adalah konstan sehingga besar arus yang mengalir dalam sirkuit bergantung pada voltase dan resistansi sesuai dengan hukum Ohm.[1]</p>
 				<p>Arus listrik merupakan satu dari tujuh satuan pokok dalam satuan internasional.[4] Satuan internasional untuk arus listrik adalah Ampere (A).[4] Secara formal satuan Ampere didefinisikan sebagai arus konstan yang, bila dipertahankan, akan menghasilkan gaya sebesar 2 x 10-7 Newton/meter di antara dua penghantar lurus sejajar, dengan luas penampang yang dapat diabaikan, berjarak 1 meter satu sama lain dalam ruang hampa udara.[4] </p>
 				</div>
 			</div>
-			<!-- /page  -->
+			<!-- /page  
 			<div  id="bahanListrik-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -261,7 +245,8 @@
 				<p>Semikonduktor adalah bahan dengan konduktivitas listrik antara insulator dan konduktor. </p>
 				</div>
 			</div>
-			<!-- /page  -->
+			-->
+			<!-- /page  
 			<div  id="elemen-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#materi-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -281,7 +266,8 @@
 				</ul>
 				</div>
 			</div>
-			<!-- /page  -->
+			-->
+			<!-- /page  
 			<div  id="resistor-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -325,7 +311,8 @@
 				<p>Pengaruh suhu ini ternyata juga terjadi pada nilai resistivitas bahan konduktor dari logam (timbal, sodium, tembaga dan alumunium). Misalkan pada t0 nilai resitivitasnya adalah ρ0, maka pada t1 menjadi ρ1.</p>
 				</div>
 			</div>
-			<!-- /page  -->
+			-->
+			<!-- /page  
 			<div  id="induktor-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -341,7 +328,8 @@
 				<p>Induktansi (L) (diukur dalam Henry) adalah efek dari medan magnet yang terbentuk disekitar konduktor pembawa arus yang bersifat menahan perubahan arus. Arus listrik yang melewati konduktor membuat medan magnet sebanding dengan besar arus. Perubahan dalam arus menyebabkan perubahan medan magnet yang mengakibatkan gaya elektromotif lawan melalui GGL induksi yang bersifat menentang perubahan arus. Induktansi diukur berdasarkan jumlah gaya elektromotif yang ditimbulkan untuk setiap perubahan arus terhadap waktu. Sebagai contoh, sebuah induktor dengan induktansi 1 Henry menimbulkan gaya elektromotif sebesar 1 volt saat arus dalam indukutor berubah dengan kecepatan 1 ampere setiap sekon. Jumlah lilitan, ukuran lilitan, dan material inti menentukan induktansi. </p>
 				</div>
 			</div>
-			<!-- /page  -->
+			-->
+			<!-- /page  
 			<div  id="kapasitor-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -359,7 +347,8 @@
 				<p>Kapasitan dapat didefinisikan sebagai suatu sistem kombinasi dari konduktor dan isolator yang bisa menyimpan listrik (elektron bebas). Kemampuannya tersebut diindikasikan denga huruf C. Satuan kapasitas dinyatakan dalam farad. Simbol farad adalah huruf F kapital. Satu farad dapat dinyatakan sebagai pengisian listrik (charge) sebesar satu Coulomb pada permukaan kapasitor dengan perbedaan potensial sebesar satu volt antara kedua pelat.</p>
 				</div>
 			</div>
-			<!-- /page  -->
+			-->
+			<!-- /page  
 			<div  id="rangkaian-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -399,19 +388,8 @@
 				<p></p>
 				</div>
 			</div>
-			<!-- /page  -->
-			<div  id="evaluasi-page" data-role="page">
-                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
-                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>EVALUASI</h1>
-                </div>
-				<div data-role="content" style="font-size:14px" >
-                	<h2>h2</h2>
-                      <div id="atomgif" class="images">
-						 <img src="img/atom.gif" id="atomgif"  />
-					  </div>
-				</div>
-            </div>
+			-->
+			<!-- /page  -->			
 			<!-- /page  -->
 			<div  id="quiz-page" data-role="page">
 				<div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
@@ -524,7 +502,42 @@
 					
 				</div>
 			</div>	
-			
+			<div  id="konsep-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Konsep Arus Listrik</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">
+                    <P>Listrik merupakan cabang ilmu fisika menyangkut fenomena alam. Sehingga untuk memperdalam energi listrik, maka perlu menyelami fenomena alam yang dikenal dengan listrik statis. Listrik dapat diketahui hanya melalui dampak atau efek yang ditimbulkan oleh muatan listrik, arus listrik, medan listrik, dan magnet listrik. </p>
+					<h3>1.1. Muatan Listrik dan Fenomena Listrik Statis</h3>
+					<p>Dalam menjalani perikehidupan manusia modern, seringkali kita melihat dan bahkan merasakan adanya fenomena listrik statis (elektrostatis).
+					Tahukah kalian, bahwa listrik telah ditemukan sejak manusia mulai mengamati efek yang timbul dari dua buah benda yang saling digosokkan. 
+					Bahkan, mungkin kita pernah merasakan seperti sengatan pada kaki kita setelah berjalan di atas karpet yang terbuat dari nilon.</p>
+					<p>Kita juga sering melihat fenomena alam yang kadang sangat dahsyat, yakni petir atau halilintar.
+					Peristiwa-peristiwa tersebut di atas merupakan gejala dari listrik statis. 
+					Listrik statis adalah gejala tentang interaksi rnuatan listrik yang tidak bergerak atau tidak bergerak secara permanen.</p>
+					<p>Mengamati fenomena alam</p>
+					<p>Perhatikan dan amati fenomena alam berikut ini:</p>
+					<p>gambar penggaris dan kertas dan yang lain</p>
+					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop </p>
+					<p>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</p>
+					<h3>1.2 Teori Atom</h3>
+					<p>Thales Militus, seorang ilmuwan Yunani, menemukan gekala listrik yang diperoleh dengan menggosok batu ambar. 
+					Setelah digosok batu ambar tersebut dapat menarik benda benda kecil yang berada di dekatnya. 
+					Sifat seperti ini dalam ilmu listrik disebut elektrifikasi. 
+					listrik yang terjadi pada batu ambar yang digosok disebut listrik statis yaitu listrik yang tidak mengalir.</p>
+					<p>Seluruh benda atau materi, yang dalam kondisi normal berwujud padat seperti besi, kayu, plastik, atau yang berwujud cairan seperti air, minyak, atau yang berwujud gas seperti uap air dan udara merupakan komposisi dari berbagai substansi yang membentuk obyek secara fisik. Pada hakekatnya materi terdiri dari substansi dasar yang disebut elemen atau unsur. Ada 110 unsur yang telah ditemukan oleh para ahli. Unsur yang membentuk suatu materi terdiri dari atom. Atom merupakan partikel terkecil dari suatu unsur yang dapat berdiri sendiri atau berupa tunggal dan dapat pula eksis berupa kombinasi atau campuran dari berbagai unsur. semua materi terdiri dari atom atom sejenis atau kombinasi dari beberapa atom atom, dan seluruh atom merupakan struktur listrik </p>
+					<div data-role="content" class="centerText">
+						<img id="periodik" src="img/tabel periodik.png" />
+				</div>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>								
+            </div>
             <div  id="tentang-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -537,13 +550,9 @@
 					<h3 class="centerText" >Fakultas Teknik</h3>
 					<h3 class="centerText" >Universitas Negeri Yogyakarta</h3>
 					<h3 class="centerText" >2011</h3>
-                </div>
-				<div data-role="content"> 
-					<button onclick="enableMute()" type="button">Mute sound</button>
-					<button onclick="disableMute()" type="button">Enable sound</button>
-					<button onclick="checkMute()" type="button">Check muted status</button>
 					
-				</div>				
+					<p>aplikasi ini dibuat dengan: adobe phonegap dan github</p>
+                </div>								
             </div>
 			
 			<!-- /end page  -->

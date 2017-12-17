@@ -105,6 +105,11 @@ h1 {
 	max-width:300px;
 	margin:15px, 0 15px;
 }
+#periodik{
+	width:100%;
+	max-width:500px;
+	margin:5px, 0 5px;
+}
 #quizstart{
 	margin:10px;
 	text-align:center;
