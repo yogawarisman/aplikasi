@@ -55,8 +55,7 @@
                     </div>
                     <div id="menu">
 						<a data-icon="plus" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
-                        <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>
-						<a data-icon="minus" data-theme="a" href="#konsep-page"  data-role="button">KONSEP ARUS LISTRIK</a>
+                        <a data-icon="minus" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>						
                         <a data-icon="arrow-u" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
                         <a data-icon="arrow-r" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
@@ -106,15 +105,33 @@
 				</div>
 			</div>
 			<!-- /page  -->
-				<div  id="materi-page" data-role="page">
+			<div  id="materi-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
                 </div>				
-				<a data-icon="arrow-r"    href="#atom-page" data-role="button">Struktur Atom</a>                                
-				<a  data-theme="b" href="#muatanListrik-page"  data-role="button">Muatan Listrik</a>
-				<a  data-theme="b" href="#definisiArus-page"  data-role="button">Definisi Arus</a>
-                <div data-role="content" style="font-size:14px" >			                 
+				<a href="#atom-page" data-role="button">Struktur Atom</a>           
+				<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+				    <h4>konsep arus listrik</h4>
+					<ul  data-role="listview">
+                        <li><a style="font-size:13px" href="#konsep-page">Muatan Listrik dan Fenomena Listrik Statis</a></li>
+                        <li><a style="font-size:13px" href="#teoriatom-page">Teori Atom </a></li>
+                        <li><a style="font-size:13px" href="#fenomena-page">Fenomena Gaya Listrik </a></li>
+                        <li><a style="font-size:13px" href="#medanlistrik-page">Medan Listrik</a></li>
+                        <li><a style="font-size:13px" href="">Hukum Coulomb </a></li>
+						<li><a style="font-size:13px" href="">Arus Elektron </a></li>
+						<li><a style="font-size:13px" href="">Besaran Nilai Arus Listrik </a></li>
+						<li><a style="font-size:13px" href="">Sifat-sifat Arus Listrik </a></li>
+                    </ul>
+				</div>
+				<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
+				    <h4>potensial listrik</h4>
+					<ul  data-role="listview">
+						<li><a style="font-size:13px" href="">Pengertian Potensial Listrik </a></li>
+						<li><a style="font-size:13px" href="">Pembangkitan Tegangan Listrik </a></li>
+					</ul>
+				</div>
+				<div data-role="content" style="font-size:14px" >			                 
                 
 				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
@@ -200,196 +217,149 @@
 					<marquee>Perkembangan Model Atom</marquee>                       
                 </div>
 			</div>
+			
 			<!-- /page  -->
-			<div  id="muatanListrik-page" data-role="page">
-				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-						<a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-						<h1>Muatan Listrik</h1>
-				</div>
-				<div data-role="content" style="font-size:14px" >
-				<p>Muatan listrik adalah muatan dasar yang dimiliki suatu benda, yang membuatnya mengalami gaya pada benda lain yang berdekatan dan juga memiliki muatan listrik. Simbol Q sering digunakan untuk menggambarkan muatan.</p> 
-				<p>Sistem Satuan Internasional dari satuan Q adalah coulomb, yang merupakan 6.24 x 1018 muatan dasar. Q adalah sifat dasar yang dimiliki oleh materi baik itu berupa proton (muatan positif) maupun elektron (muatan negatif).</p> 
-				<p>Muatan listrik total suatu atom atau materi ini bisa positif, jika atomnya kekurangan elektron. Sementara atom yang kelebihan elektron akan bermuatan negatif. Besarnya muatan tergantung dari kelebihan atau kekurangan elektron ini, oleh karena itu muatan materi/atom merupakan kelipatan dari satuan Q dasar.</p> 
-				<p>Dalam atom yang netral, jumlah proton akan sama dengan jumlah elektron yang mengelilinginya (membentuk muatan total yang netral atau tak bermuatan).</p>
-				</div>
-				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" class="ui-footer">
-					<marquee>Buat alur materi, alur tampilan dan link halaman</marquee>                        
-				</div>
-			</div>
-			<!-- /page  -->
-			<div  id="definisiArus-page" data-role="page">
-				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#arus-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Definisi Arus</h1>
-				</div>
-				<div data-role="content" style="font-size:14px">
-				<p>Arus listrik adalah banyaknya muatan listrik yang disebabkan dari pergerakan elektron-elektron, mengalir melalui suatu titik dalam sirkuit listrik tiap satuan waktu. [1] Arus listrik dapat diukur dalam satuan Coulomb/detik atau Ampere.[1] 
-				Contoh arus listrik dalam kehidupan sehari-hari berkisar dari yang sangat lemah dalam satuan mikroAmpere <span>&#181;</span>A  seperti di dalam jaringan tubuh hingga arus yang sangat kuat 1-200 kiloAmpere (kA) seperti yang terjadi pada petir.[2][3]
-				Dalam kebanyakan sirkuit arus searah dapat diasumsikan resistansi terhadap arus listrik adalah konstan sehingga besar arus yang mengalir dalam sirkuit bergantung pada voltase dan resistansi sesuai dengan hukum Ohm.[1]</p>
-				<p>Arus listrik merupakan satu dari tujuh satuan pokok dalam satuan internasional.[4] Satuan internasional untuk arus listrik adalah Ampere (A).[4] Secara formal satuan Ampere didefinisikan sebagai arus konstan yang, bila dipertahankan, akan menghasilkan gaya sebesar 2 x 10-7 Newton/meter di antara dua penghantar lurus sejajar, dengan luas penampang yang dapat diabaikan, berjarak 1 meter satu sama lain dalam ruang hampa udara.[4] </p>
-				</div>
-			</div>
-			<!-- /page  
-			<div  id="bahanListrik-page" data-role="page">
+			<div  id="konsep-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Bahan-bahan Listrik</h1>
+                    <h1>Muatan Listrik dan Fenomena Listrik Statis</h1>
                 </div>
-				<div data-role="content" style="font-size:14px">
-				<h2>Konduktor</h2>
-				<p>Konduktor adalah zat yang dapat melakukan arus listrik, baik dalam bentuk padat, cair atau gas. Konduktor yang baik adalah memiliki resistivitas kecil.</p>
-				<p>Secara umum, logam konduktif. Emas, perak, tembaga, aluminium, seng, besi baris memiliki resistivitas yang lebih besar. Jadi emas adalah konduktor yang sangat baik, tetapi karena sangat mahal, secara ekonomi tembaga dan aluminium yang paling banyak digunakan.</p>
-				<h2>Isolator</h2>
-				<p>Isolator listrik adalah bahan yang tidak dapat atau sulit untuk mentransfer muatan listrik. Dalam bahan isolasi terikat erat elektron valensi dalam atom. Bahan-bahan ini digunakan dalam perangkat elektronik sebagai isolator, atau menghambat aliran arus listrik. Isolator juga berguna sebagai beban atau pemisahan antara konduktor tanpa membuat arus yang mengalir keluar atau hanya antara konduktor.</p>
-				<h2>Semikonduktor</h2>
-				<p>Semikonduktor adalah bahan dengan konduktivitas listrik antara insulator dan konduktor. </p>
-				</div>
-			</div>
-			-->
-			<!-- /page  
-			<div  id="elemen-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#materi-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Elemen pasif dan Elemen aktif</h1>
-                </div>
-				<div data-role="content">				
-				<ul data-role="listview" data-inset="true" data-divider-theme="b"  >
-				<li data-role="list-divider" >Elemen Pasif</li>
-				<li  ><a href="#resistor-page">Resistor dan Resistansi</a></li>
-				<li  ><a href="#induktor-page">Induktor dan Induktansi</a></li>
-				<li  ><a href="#kapasitor-page">Kapasitor dan Kapasitansi</a></li>
-				</ul>
-				<ul data-role="listview" data-inset="true" data-divider-theme="b"  >
-				<li data-role="list-divider" >Elemen Aktif</li>
-				<li  ><a href="">Sumber Arus</a></li>
-				<li  ><a href="">Sumber Tegangan</a></li>
-				</ul>
-				</div>
-			</div>
-			-->
-			<!-- /page  
-			<div  id="resistor-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Resistor dan Resistansi</h1>
-                </div>
-				<div data-role="content" style="font-size:14px">
-				<h2>Resistor</h2>
-				<p>Resistor merupakan komponen elektronik yang memiliki dua pin dan didesain untuk mengatur tegangan listrik dan arus listrik, dengan resistansi tertentu (tahanan) dapat memproduksi tegangan listrik di antara kedua pin, nilai tegangan terhadap resistansi berbanding lurus dengan arus yang mengalir, berdasarkan hukum Ohm:</p>
-				<p>V = I . R</p>
-				<p>I = V / R</p>
-				<p>Resistor digunakan sebagai bagian dari rangkaian elektronik dan sirkuit elektronik, dan merupakan salah satu komponen yang paling sering digunakan. Resistor dapat dibuat dari bermacam-macam komponen dan film, bahkan kawat resistansi (kawat yang dibuat dari paduan resistivitas tinggi seperti nikel-kromium).</p>
-				<p>Karakteristik utama dari resistor adalah resistansinya dan daya listrik yang dapat dihantarkan. Karakteristik lain termasuk koefisien suhu, derau listrik (noise), dan induktansi.</p>
-				<h2>Resistansi</h2>
-				<p>Resistansi  adalah kemampuan suatu benda untuk menahan/menghambat aliran arus listrik.</p>
-				<p>Resistan listrik diukur dalam satuan ohm. Di mana satuan ohm menyatakan jumlah resistan pada suatu rangkaian listrik. Resistan sebesar satu ohm memungkinkan adanya emf sebesar satu volt yang menyebabkan terjadinya aliran arus melalui rangkaian tersebut sebesar satu amper. Simbol yang digunakan untuk menyatakan satuan ohm adalah Ω. Nilai resistan listrik pada suatu konduktor tergantung pada empat aspek berikut:</p>
-				<ul style="text-transform:none">
-					<li>Bahan yang digunakan</li>
-					<li>Diameter atau ukuran konduktor</li>
-					<li>Panjang konduktor</li>
-					<li>Suhu konduktor</li>
-				</ul>
-				<p>Besarnya nilai resistansi suatu bahan konduktor dapat dihitung dengan menggunakan persamaan :</p>
-				
-				<p>dimana : </p>
-				<p>R : resistansi konduktor, diukur dalam satuan ohm </p>
-				<p>ρ : resistivitas bahan, dalam satuan ohm.mm2/m </p>
-				<p>l : panjang konduktor, diukur dalam satuan meter (m) </p>
-				<p>A : luas penampang kawat penghantar, dalam satuan mm2 </p>
-				<p> </p>
-				<p>Pengaruh Suhu terhadap nilai Resitansi adalah </p>
-				<p>– menaikkan niali resistivitas pengantar logam murni dan logam campuran </p>
-				<p>– menurunkan nilai resistivitas penghantar non logam seperti elektrolit dan karbon serta bahan isolator seperti kertas, karet, gelas dan mika.</p>
-				<p>Misalkan, suatu resistor pada suhu t0 mempunyai resistansi R0. Bila suhu resistor naik menjadi t1, maka nilai resistansinya naik menjadi Rt. Dalam hal ini ada keanikan milai resistansi sebesar dR, di mana: </p>
-				<div>
-					<img src="img/resis.png" />
-				</div>
-				<p>di mana</p>
-				<p>α adalah konstanta yang disebut sebagai koefisien suhu</p>
-				<p>dt adalah besarnya kenaikan suhu (t1 – t0)</p>
-				<p>Sehingga dapat dituliskan:</p>		
-				<p>Pengaruh suhu ini ternyata juga terjadi pada nilai resistivitas bahan konduktor dari logam (timbal, sodium, tembaga dan alumunium). Misalkan pada t0 nilai resitivitasnya adalah ρ0, maka pada t1 menjadi ρ1.</p>
-				</div>
-			</div>
-			-->
-			<!-- /page  
-			<div  id="induktor-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Induktor dan Induktansi</h1>
-                </div>
-				<div data-role="content" style="font-size:14px">
-				<div class="centerText"> 
-					<img src="img/induktor.jpg" class="atom"/>
-				</div>
-				<h2>Induktor</h2>
-				<p>Sebuah induktor atau reaktor adalah sebuah komponen elektronika pasif (kebanyakan berbentuk torus) yang dapat menyimpan energi pada medan magnet yang ditimbulkan oleh arus listrik yang melintasinya. Kemampuan induktor untuk menyimpan energi magnet ditentukan oleh induktansinya, dalam satuan Henry. Biasanya sebuah induktor adalah sebuah kawat penghantar yang dibentuk menjadi kumparan, lilitan membantu membuat medan magnet yang kuat di dalam kumparan dikarenakan hukum induksi Faraday. Induktor adalah salah satu komponen elektronik dasar yang digunakan dalam rangkaian yang arus dan tegangannya berubah-ubah dikarenakan kemampuan induktor untuk memproses arus bolak-balik. </p>
-				<h2>Induktansi</h2>
-				<p>Induktansi (L) (diukur dalam Henry) adalah efek dari medan magnet yang terbentuk disekitar konduktor pembawa arus yang bersifat menahan perubahan arus. Arus listrik yang melewati konduktor membuat medan magnet sebanding dengan besar arus. Perubahan dalam arus menyebabkan perubahan medan magnet yang mengakibatkan gaya elektromotif lawan melalui GGL induksi yang bersifat menentang perubahan arus. Induktansi diukur berdasarkan jumlah gaya elektromotif yang ditimbulkan untuk setiap perubahan arus terhadap waktu. Sebagai contoh, sebuah induktor dengan induktansi 1 Henry menimbulkan gaya elektromotif sebesar 1 volt saat arus dalam indukutor berubah dengan kecepatan 1 ampere setiap sekon. Jumlah lilitan, ukuran lilitan, dan material inti menentukan induktansi. </p>
-				</div>
-			</div>
-			-->
-			<!-- /page  
-			<div  id="kapasitor-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#elemen-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Kapasitor dan Kapasitansi</h1>
-                </div>
-				<div data-role="content" style="font-size:14px">
-				<h2>Kapasitor</h2>
-				<p>Kondensator atau sering disebut sebagai kapasitor adalah suatu alat yang dapat menyimpan energi di dalam medan listrik, dengan cara mengumpulkan ketidakseimbangan internal dari muatan listrik. Kondensator memiliki satuan yang disebut Farad dari nama Michael Faraday. Kondensator juga dikenal sebagai "kapasitor", namun kata "kondensator" masih dipakai hingga saat ini. Pertama disebut oleh Alessandro Volta seorang ilmuwan Italia pada tahun 1782 (dari bahasa Itali condensatore), berkenaan dengan kemampuan alat untuk menyimpan suatu muatan listrik yang tinggi dibanding komponen lainnya. Kebanyakan bahasa dan negara yang tidak menggunakan bahasa Inggris masih mengacu pada perkataan bahasa Italia "condensatore", bahasa Perancis condensateur, Indonesia dan JermanKondensator atau Spanyol Condensador.</p>
-				<p>Namun kebiasaan dan kondisi serta artikulasi bahasa setiap negara tergantung pada masyarakat yang lebih sering menyebutkannya. Kini kebiasaan orang tersebut hanya menyebutkan salah satu nama yang paling dominan digunakan atau lebih sering didengar. Pada masa kini, kondensator sering disebut kapasitor (capacitor) ataupun sebaliknya yang pada ilmu elektronika disingkat dengan huruf (C).</p>
-				<p>Kondensator diidentikkan mempunyai dua kaki dan dua kutub yaitu positif dan negatif serta memiliki cairan elektrolit dan biasanya berbentuk tabung.</p>
-				<p>•	Sedangkan jenis yang satunya lagi kebanyakan nilai kapasitasnya lebih rendah, tidak mempunyai kutub positif atau negatif pada kakinya, kebanyakan berbentuk bulat pipih berwarna coklat, merah, hijau dan lainnya seperti tablet atau kancing baju.</p>
-				<p></p>
-				<p></p>
-				<h2>Kapasitan</h2>
-				<p>Kapasitan dapat didefinisikan sebagai suatu sistem kombinasi dari konduktor dan isolator yang bisa menyimpan listrik (elektron bebas). Kemampuannya tersebut diindikasikan denga huruf C. Satuan kapasitas dinyatakan dalam farad. Simbol farad adalah huruf F kapital. Satu farad dapat dinyatakan sebagai pengisian listrik (charge) sebesar satu Coulomb pada permukaan kapasitor dengan perbedaan potensial sebesar satu volt antara kedua pelat.</p>
-				</div>
-			</div>
-			-->
-			<!-- /page  
-			<div  id="rangkaian-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<div data-role="content"  style="font-size:14px">
+                    <P>Listrik merupakan cabang ilmu fisika menyangkut fenomena alam. Sehingga untuk memperdalam energi listrik, maka perlu menyelami fenomena alam yang dikenal dengan listrik statis. Listrik dapat diketahui hanya melalui dampak atau efek yang ditimbulkan oleh muatan listrik, arus listrik, medan listrik, dan magnet listrik. </p>
+					<h3>1.1. Muatan Listrik dan Fenomena Listrik Statis</h3>
+					<p>Dalam menjalani perikehidupan manusia modern, seringkali kita melihat dan bahkan merasakan adanya fenomena listrik statis (elektrostatis).
+					Tahukah kalian, bahwa listrik telah ditemukan sejak manusia mulai mengamati efek yang timbul dari dua buah benda yang saling digosokkan. 
+					Bahkan, mungkin kita pernah merasakan seperti sengatan pada kaki kita setelah berjalan di atas karpet yang terbuat dari nilon.</p>
+					<p>Kita juga sering melihat fenomena alam yang kadang sangat dahsyat, yakni petir atau halilintar.
+					Peristiwa-peristiwa tersebut di atas merupakan gejala dari listrik statis. 
+					Listrik statis adalah gejala tentang interaksi rnuatan listrik yang tidak bergerak atau tidak bergerak secara permanen.</p>
+					<p>Mengamati fenomena alam</p>
+					<p>Perhatikan dan amati fenomena alam berikut ini:</p>
+					<p>gambar penggaris dan kertas dan yang lain</p>
+					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop </p>
+					<p>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</p>
+					
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>								
+            </div>	
+			<!-- /page  -->	
+			<div  id="teoriatom-page" data-role="page">
+				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Rangkaian Resistif Arus Searah</h1>
-                </div>
-				<div data-role="content" style="font-size:14px">
-				<h2>Rangkaian Seri</h2>
-				<p>Rangkaian seri adalah rangkaian listrik yang menggunakan hukum... dimana arus yang mengalir di hambatan mempynyai nilai tetap, tapi tegangan bertambah</p>
-				<p>iRs = i1=i2=i3</p>
-				<p>vRs = v1+v2+v3</p>
-				<h2>Rangkaian Paralel</h2>
-				<p>Rangkaian paralel adalah rangkaian listrik yang menggunakan hukum.... dimana tegangan yang mengalir di hambatan mempunyai nilai yang tetap, tapi memiliki nilai arus yang beda </p>
-				<p>iRp = i1+i2+i3</p>
-				<p>vRp = v1=v2=v3</p>
-				<h2>Rangkaian Seri - Paralel</h2>
-				<p>Rangkaian gabungan dari seri dan paralel, penggabungan dari kedua hukum atau beberapa hukum</p>
-				<h2>Hukum Ohm</h2>
-				<p>Hukum Ohm adalah suatu pernyataan bahwa besar arus listrik yang mengalir melalui sebuah penghantar selalu berbanding lurus dengan beda potensial yang diterapkan kepadanya. Sebuah benda penghantar dikatakan mematuhi hukum Ohm apabila nilai resistansinya tidak bergantung terhadap besar dan polaritas beda potensial yang dikenakan kepadanya. Walaupun pernyataan ini tidak selalu berlaku untuk semua jenis penghantar, namun istilah "hukum" tetap digunakan dengan alasan sejarah.</p>
-				<p>Secara matematis hukum Ohm diekspresikan dengan persamaan:</p>
-				<p>V = I . R</p>
-				<p>Di mana :</p>
-				<p>I adalah arus listrik yang mengalir pada suatu penghantar dalam satuan Ampere.</p>
-				<p>V adalah tegangan listrik yang terdapat pada kedua ujung penghantar dalam satuan volt.</p>
-				<p>R adalah nilai hambatan listrik (resistansi) yang terdapat pada suatu penghantar dalam satuan ohm.</p>				
-				<h2>Hukum Kirchoff</h2>
-				<p>Hukum Kirchhoff merupakan salah satu hukum dalam ilmu Elektronika yang berfungsi untuk menganalisis arus dan tegangan dalam rangkaian. Hukum Kirchoff pertama kali diperkenalkan oleh seorang ahli fisika Jerman yang bernama Gustav Robert Kirchhoff (1824-1887) pada tahun 1845. Hukum Kirchhoff terdiri dari 2 bagian yaitu Hukum Kirchhoff 1 dan Hukum Kirchhoft 2.</p>
-				<p>Pengertian dan Bunyi Hukum Kirchhoff 1</p>
-				<p>Hukum Kirchhoff 1 merupakan Hukum Kirchhoff yang berkaitan dengan dengan arah arus dalam menghadapi titik percabangan. Hukum Kirchhoff 1 ini sering disebut juga dengan Hukum Arus Kirchhoff atau Kirchhoff’s Current Law (KCL).</p>
-				<p>Bunyi Hukum Kirchhoff 1 adalah sebagai berikut :</p>
-				<p>“Arus Total yang masuk melalui suatu titik percabangan dalam suatu rangkaian listrik sama dengan arus total yang keluar dari titik percabangan tersebut.”</p>
-				<p>Pengertian dan Bunyi Hukum Kirchhoff 2</p>
-				<p>Hukum Kirchhoff 2 merupakan Hukum Kirchhoff yang digunakan untuk menganalisis  tegangan (beda potensial) komponen-komponen elektronika pada suatu rangkaian tertutup. Hukum Kirchhoff 2 ini juga dikenal dengan sebutan Hukum Tegangan Kirchhoff atau Kirchhoff’s Voltage Law (KVL).</p>
-				<p>Bunyi Hukum Kirchhoff 2 adalah sebagai berikut :</p>
-				<p>“Total Tegangan (beda potensial) pada suatu rangkaian tertutup adalah nol”</p>
-				<p></p>
-				<p></p>
-				<p></p>
+                    <h1>teori atom</h1>
+				</div>
+				<div data-role="content"  style="font-size:14px">
+					<h3>1.2 Teori Atom</h3>
+					<p>Thales Militus, seorang ilmuwan Yunani, menemukan gekala listrik yang diperoleh dengan menggosok batu ambar. 
+					Setelah digosok batu ambar tersebut dapat menarik benda benda kecil yang berada di dekatnya. 
+					Sifat seperti ini dalam ilmu listrik disebut elektrifikasi. 
+					listrik yang terjadi pada batu ambar yang digosok disebut listrik statis yaitu listrik yang tidak mengalir.</p>
+					<p>Seluruh benda atau materi, yang dalam kondisi normal berwujud padat seperti besi, kayu, plastik, atau yang berwujud cairan seperti air, minyak, atau yang berwujud gas seperti uap air dan udara merupakan komposisi dari berbagai substansi yang membentuk obyek secara fisik. 
+					Pada hakekatnya materi terdiri dari substansi dasar yang disebut elemen atau unsur. 
+					Ada 110 unsur yang telah ditemukan oleh para ahli. 
+					Unsur yang membentuk suatu materi terdiri dari atom. 
+					Atom merupakan partikel terkecil dari suatu unsur yang dapat berdiri sendiri atau berupa tunggal dan dapat pula eksis berupa kombinasi atau campuran dari berbagai unsur. 
+					Semua materi terdiri dari atom atom sejenis atau kombinasi dari beberapa atom atom, dan seluruh atom merupakan struktur listrik </p>
+					<div data-role="content" class="centerText">
+						<img id="periodik" src="img/tabel periodik.png" />
+					</div>
+					<h4 class="centerText" >Tabel Priodik Unsur</h4>
+					<p>	Suatu zat terdiri atas partikel-partikel kecil yang disebut atom. 
+						Atom berasal dari kata atomos, yang artinya tidak dapat dibagi-bagi lagi.
+						Tetapi, dalam perkembangannya, atom ini masih dapat diuraikan lagi.
+						Atom terdiri atas dua bagian, yaitu inti atom dan kulit atom. 
+						Kulit atom terdiri atas partikel-partikel bermuatan negatif yang disebut elektron. 
+						Inti atom tersusun dari dua macam partikel, yaitu proton yang bermuatan positif dan netron yang tidak bermuatan (netral).
+					</p>
+					<p>	Nukleus terletak pada pusat atom, oleh karena itu sering disebut sebagi inti atom. Nukleus terdiri dari proton dan neutron.
+						Muatan listrik yang dimiliki oleh proton sama dengan muatan yang dimiliki oleh elektron tetapi berbeda polaritas.
+					</p>
+					<p>	Suatu atom dikatakan netral apabila di dalam intinya terdapat muatan positif (proton) yang jumlahnya sama dengan muatan negatif (elektron) pada kulitnya.
+						Suatu atom dikatakan bermuatan positif apabila jumlah muatan positif (proton) pada inti lebih banyak daripada muatan negatif (elektron) pada kulit atom yang mengelilinginya.
+						Suatu atom dikatakan bermuatan negatif apabila jumlah muatan positif (proton) pada inti lebih sedikit daripada jumlah muatan negatif (elektron) pada kulit atom.
+					</p>
+					<p>	Atom yang paling sederhana adalah atom hidrogen yang hanya tersusun dari satu proton dan satu elektron. 
+						Karena jumlah proton dan elektronnya sama, maka atom hidrogen dikatakan sebagai atom netral. 
+						Atom helium terdiri dari dua proton, dua neutron dan dua elektron. 
+						Karena jumlah proton dan jumlah elektronnya sama, maka atom helium juga dikatakan sebagai atom netral.
+					</p>
+				</div>	
+			</div>
+			<!-- /page  -->	
+			<div  id="fenomena-page" data-role="page">
+				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Fenomena Gaya Listrik</h1>
+				</div>
+				<div data-role="content"  style="font-size:14px">
+					<h3>1.3. Fenomena Gaya Listrik</h3>
+					<p>	Muatan listrik merupakan istilah yang cukup penting dalam dunia kelistrikan. Muatan listrik merupakan sifat fisik dari setiap benda. 
+						Menurut Benyamin Franklin, muatan listrik dapat dibedakan menjadi dua, yaitu muatan positif dan muatan negatif.
+					</p>
+					<p>	Semua benda baik padat, gas, dan cair, terdiri dari partikel-partikel kecil yang disebut molekul-molekul. 
+						Molekul-molekul sendiri terbentuk oleh partikel-partikel yang lebih kecil lagi yang disebut atom-atom. 
+						Benda di mana molekul-molekulnya terdiri dari atom-atom yang sama, lazim disebut sebagai unsur. 
+						Bila atom-atom yang membentuk molekul tidak sama, disebut campuran. 
+						Sebagai contoh, struktur atom hydrogen terdiri dari satu proton, dan satu elektron, atom oksigen terdiri dari delapan proton, delapan neutron, dan delapan elektron.
+					</p>
+					<p>	gambar struktur atom hidrogen dan oksigen</p>
+					<p>	Air terbentuk dari molekul-molekul air. 
+						Satu molekul air (H2O) merupakan komposisi dari dua unsur atom, yaitu dua atom hidrogen (H) dan satu atom oksigen (O).
+					</p>
+					<p>	Atom yang kehilangan atau mendapat tambahan elektron dianggap tidak stabil. 
+						Kelebihan elektron pada suatu atom menghasilkan muatan negatif. 
+						Kekurangan elektron pada suatu atom akan menghasilkan muatan positif. 
+						Muatan listrik yang berbeda akan bereaksi dalam berbagai cara. 
+						Dua partikel yang bermuatan negatif akan saling tolak menolak, demikian juga dua partikel yang bemuatan positif.
+					</p>
+					<p>	nilai muatan satu elektron sebesar 1.602×10−19. 
+						Karena bermuatan negatif maka lazim disingkat dengan -e, dan untuk proton disingkat menjadi +e karena bermuatan positif.
+					</p>
+					<p>	Istilah ion dikenakan pada pada suatu atom atau kelompok atom yang kehilangan satu atau lebih elektron, sehingga menghasilkan muatan positif (lazim disebut sebagai kation) pada atomnya.
+						Sebaliknya suatu atom atau kelompok atom yang mendapatkan tambahan elektron sehingga bermuatan negatif (lazim disebut sebagai anion).
+					</p>
+					<p>Sifat-sifat penting dari proton dan elektron:</p>
+					<p>- Masa proton adalah 1,66 x 10-27 kg.</p>
+					<p>- Masa elektron adalah 9,1096 x 10-31 kg.</p>
+					<p>- Muatan listrik diukur dalam satuan coulomb (C), di mana 1 coulomb sama dengan jumlah muatan yang dimiliki oleh 6,24 x 1018 elektron.</p>
+					<p>- Muatan dari satu elektron adalah e = 1,602 x 10-19 Coulomb.</p>
+					<p>- Jumlah elektron pada setiap atom benda berlainan.</p>
+					<p>- Jumlah elektron pada setiap atom benda berlainan.</p>
+					<p>gambar 1.8 gaya tolak dan gaya tarik listrik</p>
+					<p>	Gaya listrik yang dimaksudkan di sini adalah gaya tolak dan gaya tarik yang timbul pada suatu atom tunggal atau kelompok atom.
+						Gaya tersebut dapat timbul karena adanya kelebihan atau kekurangan jumlah elektron pada atom tersebut. 
+						Bila salah satu atom bermuatan positif dan ada atom lain yang bermuatan negatif maka terjadi gaya tarik antar keduanya. 
+						Sebaliknya bila kedua atom bermuatan sama maka terjadi gaya tolak antar keduanya.
+					</p>
+					<p></p>
+					<p></p>
 				</div>
 			</div>
-			-->
-			<!-- /page  -->			
+			<!-- /page  -->
+			<div  id="medanlistrik-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Medan Listrik</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">
+					<h3>1.4 Medan Listrik</h3>
+					<p>gambar 1.9 garis gaya listrik</p>
+					<p>	Setiap benda yang bermuatan listrik, pasti akan memancarkan garis-garis gaya listrik, ke segala arah. 
+						Pada benda bermuatan positif, maka garis-garis gaya listrik akan memancar keluar benda, sedang pada benda bermuatan negatif, garis-garis gaya listrik menuju ke dalam.
+						Medan listrik adalah daerah di sekitar benda bermuatan listrik yang masih dipengaruhi oleh gaya listrik. 
+						Medan listrik digambarkan dengan garis-garis gaya listrik.</p>
+					<p>Sifat-sifat garis-garis gaya listrik: </p>
+					<p>Garis gaya listrik berasal dari muatan positif menuju muatan negatif.</p>
+					<p>Garis gaya listrik tidak pernah berpotongan.</p>
+					<p>Semakin rapat garis gaya listrik, semakin kuat medan listriknya.</p>
+					<p>gambar 1.10 sifat garis gaya listrik </p>
+					<p></p>								
+				</div>
+			</div>
 			<!-- /page  -->
 			<div  id="quiz-page" data-role="page">
 				<div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
@@ -502,42 +472,7 @@
 					
 				</div>
 			</div>	
-			<div  id="konsep-page" data-role="page">
-                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
-                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Konsep Arus Listrik</h1>
-                </div>
-				<div data-role="content"  style="font-size:14px">
-                    <P>Listrik merupakan cabang ilmu fisika menyangkut fenomena alam. Sehingga untuk memperdalam energi listrik, maka perlu menyelami fenomena alam yang dikenal dengan listrik statis. Listrik dapat diketahui hanya melalui dampak atau efek yang ditimbulkan oleh muatan listrik, arus listrik, medan listrik, dan magnet listrik. </p>
-					<h3>1.1. Muatan Listrik dan Fenomena Listrik Statis</h3>
-					<p>Dalam menjalani perikehidupan manusia modern, seringkali kita melihat dan bahkan merasakan adanya fenomena listrik statis (elektrostatis).
-					Tahukah kalian, bahwa listrik telah ditemukan sejak manusia mulai mengamati efek yang timbul dari dua buah benda yang saling digosokkan. 
-					Bahkan, mungkin kita pernah merasakan seperti sengatan pada kaki kita setelah berjalan di atas karpet yang terbuat dari nilon.</p>
-					<p>Kita juga sering melihat fenomena alam yang kadang sangat dahsyat, yakni petir atau halilintar.
-					Peristiwa-peristiwa tersebut di atas merupakan gejala dari listrik statis. 
-					Listrik statis adalah gejala tentang interaksi rnuatan listrik yang tidak bergerak atau tidak bergerak secara permanen.</p>
-					<p>Mengamati fenomena alam</p>
-					<p>Perhatikan dan amati fenomena alam berikut ini:</p>
-					<p>gambar penggaris dan kertas dan yang lain</p>
-					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop </p>
-					<p>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</p>
-					<h3>1.2 Teori Atom</h3>
-					<p>Thales Militus, seorang ilmuwan Yunani, menemukan gekala listrik yang diperoleh dengan menggosok batu ambar. 
-					Setelah digosok batu ambar tersebut dapat menarik benda benda kecil yang berada di dekatnya. 
-					Sifat seperti ini dalam ilmu listrik disebut elektrifikasi. 
-					listrik yang terjadi pada batu ambar yang digosok disebut listrik statis yaitu listrik yang tidak mengalir.</p>
-					<p>Seluruh benda atau materi, yang dalam kondisi normal berwujud padat seperti besi, kayu, plastik, atau yang berwujud cairan seperti air, minyak, atau yang berwujud gas seperti uap air dan udara merupakan komposisi dari berbagai substansi yang membentuk obyek secara fisik. Pada hakekatnya materi terdiri dari substansi dasar yang disebut elemen atau unsur. Ada 110 unsur yang telah ditemukan oleh para ahli. Unsur yang membentuk suatu materi terdiri dari atom. Atom merupakan partikel terkecil dari suatu unsur yang dapat berdiri sendiri atau berupa tunggal dan dapat pula eksis berupa kombinasi atau campuran dari berbagai unsur. semua materi terdiri dari atom atom sejenis atau kombinasi dari beberapa atom atom, dan seluruh atom merupakan struktur listrik </p>
-					<div data-role="content" class="centerText">
-						<img id="periodik" src="img/tabel periodik.png" />
-				</div>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
-					<p></p>
-				</div>								
-            </div>
+			
             <div  id="tentang-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
