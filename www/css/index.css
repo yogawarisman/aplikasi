@@ -110,6 +110,14 @@ h1 {
 	max-width:500px;
 	margin:5px, 0 5px;
 }
+#atomH2O{
+	position:relative;	
+	text-align:center;
+	
+}
+#H{margin:auto;}
+#O{margin:auto;}
+	
 #quizstart{
 	margin:10px;
 	text-align:center;
