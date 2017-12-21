@@ -36,8 +36,7 @@ var app = {
         document.addEventListener("backbutton", onBackKeyDown, false);
     },
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        
+    receivedEvent: function(id) {        
     }
 };
 
