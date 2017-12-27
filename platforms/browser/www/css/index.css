@@ -94,6 +94,11 @@ h1 {
     text-align:center;
 	text-overflow: ellipsis;
 }
+#h4info{
+	text-transform:none;
+	font-size:16px;
+    font-weight:bold;	
+}
 .header{
 	min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; 
 }
@@ -125,6 +130,17 @@ h1 {
 	border-width:2px;
 	border-color:#FFFFFF,2px;
 }
+#info{
+	position:relative;	
+	text-align:center;
+}
+#githublogo{margin:auto;
+max-width:100px;
+}
+#phonegaplogo{margin:auto;
+max-width:100px;}
+#pgblogo{margin:auto;
+max-width:100px;}
 
 .event {
     border-radius:4px;
