@@ -11,7 +11,10 @@
 		<script type="text/javascript" src="libs/fastclick.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>		
+		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+
+		<script type="text/javascript" src="js/latex.js"></script>		
+
 		<script>	
 		function onBackKeyDown(){
 			navigator.app.backHistory();
@@ -35,7 +38,9 @@
                     <div id="menu">
 						<a data-icon="calendar" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
                         <a data-icon="search" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>						
-                        <a data-icon="edit" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
+                        <!-- inactive  
+						<a data-icon="edit" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
+						-->
                         <a data-icon="info" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
                     	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
@@ -219,6 +224,7 @@
 						<img src="img/gbr 1.1 b.png" class="atom"/>
 						<img src="img/gbr 1.1 c.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.1 fenomena listrik statis</p>
 					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop </p>
 					<p>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</p>									
 				</div>								
@@ -244,7 +250,7 @@
 					<div data-role="content" class="centerText">
 						<img id="periodik" src="img/tabel periodik.png" />
 					</div>
-					<h4 class="centerText" >Tabel Priodik Unsur</h4>
+					<p class="centerText">gambar 1.2 tabel periodik unsur<p>					
 					<p>	Suatu zat terdiri atas partikel-partikel kecil yang disebut atom. 
 						Atom berasal dari kata atomos, yang artinya tidak dapat dibagi-bagi lagi.
 						Tetapi, dalam perkembangannya, atom ini masih dapat diuraikan lagi.
@@ -252,6 +258,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.3.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.3 susunan sebuah atom</p>
 					<p>	Atom terdiri atas dua bagian, yaitu inti atom dan kulit atom. 
 						Kulit atom terdiri atas partikel-partikel bermuatan negatif yang disebut elektron. 
 						Inti atom tersusun dari dua macam partikel, yaitu proton yang bermuatan positif dan netron yang tidak bermuatan (netral).
@@ -266,6 +273,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.4.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.4 susunan atom positif, negatif dan netral</p>
 					<p>	Atom yang paling sederhana adalah atom hidrogen yang hanya tersusun dari satu proton dan satu elektron. 
 						Karena jumlah proton dan elektronnya sama, maka atom hidrogen dikatakan sebagai atom netral. 
 						Atom helium terdiri dari dua proton, dua neutron dan dua elektron. 
@@ -274,6 +282,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.5.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.5 susunan atom hidrogen dan helium</p>
 				</div>	
 			</div>
 			<!-- /page  -->	
@@ -297,35 +306,37 @@
 						<img id="H" src="img/gbr 1.6 a.png" align="middle" />
 						<img id="O"src="img/gbr 1.6 b.png" align="middle" />
 					</div>
-					
+					<p class="centerText">gambar 1.6 struktur atom hidrogen (a) dan oksigen (b)</p>
 					<p>	Air terbentuk dari molekul-molekul air. 
-						Satu molekul air (H2O) merupakan komposisi dari dua unsur atom, yaitu dua atom hidrogen (H) dan satu atom oksigen (O).
+						Satu molekul air (H<sub>2</sub>O) merupakan komposisi dari dua unsur atom, yaitu dua atom hidrogen (H) dan satu atom oksigen (O).
 					</p>
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.7.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.7 komposisi molekul air</p>
 					<p>	Atom yang kehilangan atau mendapat tambahan elektron dianggap tidak stabil. 
 						Kelebihan elektron pada suatu atom menghasilkan muatan negatif. 
 						Kekurangan elektron pada suatu atom akan menghasilkan muatan positif. 
 						Muatan listrik yang berbeda akan bereaksi dalam berbagai cara. 
 						Dua partikel yang bermuatan negatif akan saling tolak menolak, demikian juga dua partikel yang bemuatan positif.
 					</p>
-					<p>	nilai muatan satu elektron sebesar 1.602×10−19. 
+					<p>	nilai muatan satu elektron sebesar 1.602×10<sup>−19</sup>. 
 						Karena bermuatan negatif maka lazim disingkat dengan -e, dan untuk proton disingkat menjadi +e karena bermuatan positif.
 					</p>
 					<p>	Istilah ion dikenakan pada pada suatu atom atau kelompok atom yang kehilangan satu atau lebih elektron, sehingga menghasilkan muatan positif (lazim disebut sebagai kation) pada atomnya.
 						Sebaliknya suatu atom atau kelompok atom yang mendapatkan tambahan elektron sehingga bermuatan negatif (lazim disebut sebagai anion).
 					</p>
 					<p>Sifat-sifat penting dari proton dan elektron:</p>
-					<p>- Masa proton adalah 1,66 x 10-27 kg.</p>
-					<p>- Masa elektron adalah 9,1096 x 10-31 kg.</p>
-					<p>- Muatan listrik diukur dalam satuan coulomb (C), di mana 1 coulomb sama dengan jumlah muatan yang dimiliki oleh 6,24 x 1018 elektron.</p>
-					<p>- Muatan dari satu elektron adalah e = 1,602 x 10-19 Coulomb.</p>
+					<p>- Masa proton adalah 1,66 x 10<sup>-27</sup> kg.</p>
+					<p>- Masa elektron adalah 9,1096 x 10<sup>-31</sup> kg.</p>
+					<p>- Muatan listrik diukur dalam satuan coulomb (C), di mana 1 coulomb sama dengan jumlah muatan yang dimiliki oleh 6,24 x 10<sup>18</sup> elektron.</p>
+					<p>- Muatan dari satu elektron adalah e = 1,602 x 10<sup>-19</sup> Coulomb.</p>
 					<p>- Jumlah elektron pada setiap atom benda berlainan.</p>
 					<p>- Jumlah elektron pada setiap atom benda berlainan.</p>
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.8.png" class="atom"/>
 					</div>
+					<p class="centerText">gambar 1.8 gaya tolak dan gaya tarik listrik</p>
 					<p>	Gaya listrik yang dimaksudkan di sini adalah gaya tolak dan gaya tarik yang timbul pada suatu atom tunggal atau kelompok atom.
 						Gaya tersebut dapat timbul karena adanya kelebihan atau kekurangan jumlah elektron pada atom tersebut. 
 						Bila salah satu atom bermuatan positif dan ada atom lain yang bermuatan negatif maka terjadi gaya tarik antar keduanya. 
@@ -358,7 +369,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.10.png" class="atom"/>
 					</div>
-					<p class="centerText">gambar 1.10 sifat garis gaya listrik </p>
+					<p class="centerText">gambar 1.10 sifat garis-garis gaya listrik </p>
 					<p></p>								
 				</div>
 			</div>
@@ -384,13 +395,15 @@
 					</p>
 					<p>	Gaya listrik yang merupakan tarikan atau tolakan ini pertama kali diselidiki oleh seorang fisikawan besar Perancis bernama Charles Coulomb (1736 1806), pada akhir abad 18. 
 						Fisikawan tersebut menemukan bahwa gaya antara muatan bekerja sepanjang garis yang menghubungkan keduanya dengan besar yang sebanding dengan besar kedua muatan dan berbanding terbalik dengan kuadrat jarak. 
-						Hasil pengamatan ini melahirkan hukum Coulomb yang secara matematis ditulis sebagai berikut:</p>
-					<p>F = k . (Q1.Q2)/r^2</p>
+						Hasil pengamatan ini melahirkan hukum Coulomb yang secara matematis ditulis sebagai berikut:</p>					
+					<div class="centerText" lang="latex">
+						F = k.\frac{(Q_1.Q_2)}{r^2}
+					</div>
 					<p>Di mana:</p>
 					<p>F = gaya coulomb (N)</p>
-					<p>Q1,Q2 = muatan partikel (C)</p>
+					<p>Q<sub>1</sub>,Q<sub>2</sub> = muatan partikel (C)</p>
 					<p>r = jarak antara kedua muatan (m)</p>
-					<p>k = tetapam elektrostatis untuk ruang hampa (9.10^9 N.m^2/C^2)</p>
+					<p>k = tetapam elektrostatis untuk ruang hampa (9.10<sup>9</sup> N.m<sup>2</sup>/C<sup>2</sup>)</p>
 					<p>	Muatan listrik atom netral, karena jumlah muatan positif sama dengan jumlah muatan negatif. 
 						Tetapi dalam kondisi tertentu, muatan dalam suatu atom dapat menjadi tidak seimbang, hal ini dapat terjadi bila suatu atom kehilangan berapa elektronnya.
 						Atom yang kehilangan elektronnya akan bermuatan positif, dan atom lain yang menerima tambahan elektron akan bermuatan negatif. 
@@ -443,10 +456,10 @@
                 </div>
 				<div data-role="content" style="font-size:14px" >
 					<h3>1.7 Besaran Nilai Arus Listrik</h3>
-					<p>	Muatan listrik diukur dalam satuan coulomb (C), di mana 1 Coulomb sama dengan jumlah muatan yang dimiliki oleh 6,24 x 10^18 elektron, dan muatan dari satu elektron adalah e = 1,602 x 10^(-19) Coulomb. 
+					<p>	Muatan listrik diukur dalam satuan coulomb (C), di mana 1 Coulomb sama dengan jumlah muatan yang dimiliki oleh 6,24 x 10<sup>18</sup> elektron, dan muatan dari satu elektron adalah e = 1,602 x 10<sup>-19</sup> Coulomb. 
 						Satu Coulomb adalah hitungan sejumlah elektron yang melewati sauatu konduktor setiap detik, sedang laju aliran arus konstan pada satu amper.</p>
 					<p>	Arus listrik dalam penghantar adalah pergerakan terarah sejumlah elektron dari ujung satu ke ujung lainnya. 
-						Jumlah elektron dalam satu Coulomb sama dengan 6,24 x 10^18 buah elektron. 
+						Jumlah elektron dalam satu Coulomb sama dengan 6,24 x 10<sup>18</sup> buah elektron. 
 						Aliran satu Coulomb per detik sama dengan satu amper.
 						Coulomb mengukur jumlah elektron. Amper mengukur laju aliran arus listrik. Amper tidak mengukur elektron. 
 						Tetapi Amper memiliki hubungan 1/1 dengan Coulomb.
@@ -466,17 +479,25 @@
 					<p>	Maka volume penghantar yang dilalui oleh pergerakan elektron pada waktu dt
 						adalah : v.A.dt dan jumlah elektron yang bergerak dalam volume tersebut adalah : n.v.A.dt</p>
 					<p>Jadi besarnya muatan yang menembus penampang penghantar dalam waktu dt adalah</p>
-					<p>dq = n.v.A.e.dt.</p>
+					
+					<div class="centerText" lang="latex">
+					dq = n.v.A.e.dt
+					</div>
 					<p>Definisi arus listrik (I) adalah besarnya muatan per satuan waktu, jadi:</p>
-					<p>i = dq/dt = n.v.A.e amper</p>
+					
+					<div class="centerText" lang="latex">
+					i = \frac{dq}{dt} = n.v.A.e
+					</div>
 					<p>Definisi kerapatan arus adalah besarnya arus per satuan luas penampang, jadi:</p>
-					<p>J = I/A = n.v.e A/m^2</p>
-					<p>  </p>
+					
+					<div class="centerText" lang="latex">
+					J = \frac{I}{A} = n.v.e.A/m^2
+					</div >
 					<p>Misalkan,</p>
-					<p>J = 1,55.106 A/m^2</p>
-					<p>n = 10^29 untuk tembaga</p>
-					<p>e = 1,62.10-19 C</p>
-					<p>maka v = 9,7.10^(-5) m/s</p>
+					<p>J = 1,55.106 A/m<sup>2</sup></p>
+					<p>n = 10<sup>29</sup> untuk tembaga</p>
+					<p>e = 1,62.10<sup>-19</sup> C</p>
+					<p>maka v = 9,7.10<sup>-5</sup> m/s</p>
 					<p></p>
 				</div>
 			</div>
@@ -515,7 +536,7 @@
 					<p>	Di dalam fisika jumlah muatan yang mengalir tiap sekonnya disebut dengan arus listrik. 
 						Muatan yang mengalir tersebut adalah elektron. 
 						Elektron mengalir dalam rangkaian sangat pelan. 
-						Satu mol elektron yang mengalir dalam kabel tembaga dengan luas penampang orde 10^(-6) m2 hanya memiliki kecepatan dengan orde 10^(-4) m/s. 
+						Satu mol elektron yang mengalir dalam kabel tembaga dengan luas penampang orde 10<sup>-6</sup> m<sup>2</sup> hanya memiliki kecepatan dengan orde 10<sup>-4</sup> m/s. 
 						Kecepatan tersebut dapat dibayangkan hanya seperti sebuah semut yang sedang berjalan atau bahkan lebih lambat lagi.
 					</p>
 					<p>	Sebuah sumber listrik memiliki kutub positif dan kutub negatif, apabila pada kutub positif dan kutub negatif tersebut dipasang saluran penghubung maka akan terjadi perpindahan elektron dari kutub negatif ke kutub positif. 
@@ -577,8 +598,11 @@
 					<p>	Beda potensial dalam bahasa Inggris voltage atau seringkali orang menyebut dengan istilah tegangan listrik.
 						Tegangan listrik adalah kerja yang dilakukan untuk menggerakkan satu muatan (sebesar satu coulomb) pada elemen atau komponen dari satu terminal/kutub ke terminal/kutub lainnya (?)
 					</p>
-					<p>pengertian diatas dapat dipersingkat bahwa tegangan adalah energi per satuan muatan. Secara matematis dituliskan: </p>
-					<p>v = dw/dq , diukur dalam satuanvolt (V). </p>
+					<p>pengertian diatas dapat dipersingkat bahwa tegangan adalah energi per satuan muatan. Dalam satuan volt, secara matematis dituliskan: </p>
+					<div class="centerText" lang="latex">
+					v = \frac{dw}{dq}
+					</div>
+					
 					<p>	Ada dua cara menganalis beda potensial, yaitu: (a) tegangan turun (voltage drop), dan tegangan naik (voltage rise).
 						Untuk aplikasi praktis, yang lazim digunakan adalah pengertian kedua yaitu tegangan turun, yakni jika dipandang dari potensial lebih tinggi ke potensial lebih rendah dalam hal ini dari terminal A ke terminal B.</p>
 					<p>	Hukum muatan listrik menyatakan bahwa muatan yang sejenis akan saling tolak.
@@ -614,7 +638,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.22.png" class="atom"/>
 					</div>
-					<p>gambar 1.22 Prinsip Pembangkitan Potensial Listrik (emf)</p>
+					<p class="centerText">gambar 1.22 Prinsip Pembangkitan Potensial Listrik (emf)</p>
 					<p>	Pada Gambar 1.22A, penghantar tidak memotong medan magnet tetapi sejajar dengan medan magnet.
 						Pada posisi seperti itu, tidak dibangkitkan emf di konduktornya.
 						Tetapi pada posisi konduktor seperti diperlihatkan dalam Gambar 1.22B, terlihat kedua sisi konduktor memotong medan magnet.
@@ -633,7 +657,7 @@
 					<div data-role="content" class="centerText">
 						<img src="img/gbr 1.23.png" class="atom"/>
 					</div>
-					<p>Gambar 1.23 Arus dan tegangan (emf) berubah dalam satu putaran jangkar</p>
+					<p class="centerText">Gambar 1.23 Arus dan tegangan (emf) berubah dalam satu putaran jangkar</p>
 					<p>	Arus listrik dapat dihasilkan melalui pergerakan electron karena proses kimiawi.
 						Sebuah batere atau akumulator menghasilkan aliran electron secara terus menerus melalui reaksi kimia antara dua elektroda yang berbeda jenisnya.
 						Elektroda merupakan sebuah konduktor padat di mana arus listrik dapat mengalir melaluinya.
