@@ -17,12 +17,25 @@
 		<script>	
 		function onBackKeyDown(){
 			navigator.app.backHistory();
-		}		
+		}
+		function onOffline() {
+		// Handle the offline event
+		console.log("lost connection");
+		}
 		</script>
 		<title>Aplikasi Android Arus Listrik Mendiskripsikan Konsep Rangkaian Listrik</title>
     </head>
     <body>
         <div id="app">
+			<!-- welcome-page  -->
+			<div id="welcome-page" data-role="page" style="text-align: center;" >
+				<div data-role="content" >
+				<h3>Selamat Datang</h3>
+				<h1>Di Media Pembelajaran</h1>
+				<br/>
+				<center><a href="#home-page"  data-role="button" data-inline="true" data-icon="arrow-r">Masuk</a></center>
+				</div>
+			</div>
 			<!-- home-page  -->
             <div id="home-page" data-role="page">
                 <div id="header1" data-role="content" data-theme="a" >
