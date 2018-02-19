@@ -8,13 +8,12 @@
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />		
+		<script type="text/javascript" src="js/latex.js"></script>
 		<script type="text/javascript" src="libs/fastclick.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
-
-		<script type="text/javascript" src="js/latex.js"></script>		
-
+				
 		<script>	
 		function onBackKeyDown(){
 			navigator.app.backHistory();
@@ -37,7 +36,7 @@
 					<hr>
                     <div id="menu">
 						<a data-icon="calendar" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
-                        <a data-icon="search" data-theme="a" href="#materi-page"  data-role="button">MATERI</a>						
+                        <a data-icon="search" data-theme="a" href="#materi-page" data-transition="slide" data-role="button">MATERI</a>						
                         <!-- inactive  
 						<a data-icon="edit" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
 						-->
@@ -63,35 +62,36 @@
                     <h1>Silabus</h1>
                 </div>
                 <div data-role="content" style="font-size:14px" id="silabus">
+					
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>KOMPETENSI DASAR</h4>
-						<p>Mendiskripsikan Konsep Rangkaian Listrik</p>							    
+						<h5>Mendiskripsikan Konsep Rangkaian Listrik</h5>							    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>INDIKATOR</h4>
-						<p>1. Struktur atom, bagian-bagian dari atom, hole , dan elektron bebas dijelaskan berkaitan dengan teknik kelistrikan</p>
-						<p>2. Konsep rangkaian listrik dipahami sesuai dengan bahan ajar</p>
+						<h5>1. Struktur atom, bagian-bagian dari atom, hole , dan elektron bebas dijelaskan berkaitan dengan teknik kelistrikan</h5>
+						<h5>2. Konsep rangkaian listrik dipahami sesuai dengan bahan ajar</h5>
 					    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>TUJUAN PEMBELAJARAN</h4>
-						<p>1. Menjelaskan struktur atom, bagian-bagian dari atom, hole, dan elektron bebas berkaitan dengan teknik kelistrikan</p>
-						<p>2. Memahami konsep rangkaian listrik sesuai bahan ajar</p>					    
+						<h5>1. Menjelaskan struktur atom, bagian-bagian dari atom, hole, dan elektron bebas berkaitan dengan teknik kelistrikan</h5>
+						<h5>2. Memahami konsep rangkaian listrik sesuai bahan ajar</h5>					    
 					</div>
 					<div data-role="collapsible" data-theme="b"  data-iconpos="right" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" >
 					    <h4>MATERI POKOK</h4>
-						<p>1. Struktur Atom</p>
-						<p>2. Hole</p>
-						<p>3. Elektron Bebas</p>
-						<p>4. Arus Listrik</p>
+						<h5>1. Struktur Atom</h5>
+						<h5>2. Hole</h5>
+						<h5>3. Elektron Bebas</h5>
+						<h5>4. Arus Listrik</h5>
 					    
 					</div>									
 				</div>
 			</div>
 			<!-- /page  -->
 			<div  id="materi-page" data-role="page">
-                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
-                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                <div data-role="header" data-id="header" id="header" data-position="fixed"  class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-transition="slide" data-direction="reverse" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
                 </div>
 				<div data-role="content" style="font-size:14px" >
@@ -434,6 +434,21 @@
                 </div>
 				<div data-role="content" style="font-size:14px" >
 					<h3>1.6 Arus Elektron </h3>
+					<p>Jika ada listrik statis pasti ada listrik dinamis. Karena sifatnya yang statis maka fenomena listrik statis tidak dapat dimanfaatkan untuk keperluan yang membutuhkan aktivitas secara terus-menerus atau kontinyu. Kalau listrik statis tidak dapat dimanfaatkan energinya maka listrik dinamis pasti dapat dimanfaatkan energi yang ditimbulkan oleh fenomena listrik dinamis untuk keperluan yang lebih produktif.
+Listrik dinamis umumnya disebut sebagai listrik. Jika membahas tentang listrik berarti membahas tentang listrik dinamis. 
+Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti energi gerak, panas, suara maupun kimia.
+</p>
+<h3>Pergerakan Elektron Pada Penghantar Listrik</h3>
+<p>apakah sebenarnya listrik itu dan mengapa begitu mudahnya untuk mengkonversi energi ini menjadi bentuk energi lain?</p>
+<p>Perhatikan dan amati peristiwa berikut ini:</p>
+<div data-role="content" class="centerText">
+						<img src="img/gbr 1.13 a.png" class="atom"/>
+						<img src="img/gbr 1.13 b.png" class="atom"/>
+						<img src="img/gbr 1.13 c.png" class="atom"/>
+						<img src="img/gbr 1.13 d.png" class="atom"/>
+					</div>
+					<p class="centerText">gambar 1.13 sumber energi listrik dan manfaatnya</p>
+					
 					<p>	Sifat utama elektrostatis adalah tidak bisa mempertahankan perpindahan elektron dalam rentang waktu lama. Untuk dapat memanfaatkan pergerakan elektron diperlukan adanya pergerakan elektron secara kontinyu. 
 						Pergerakan elektron bebas secara terus menerus (kontinyu) sering disebut sebagai arus elektron.
 						arus pergerakan elektron lazim disebut sebagai arus listrik, tetapi dengan kesepakatan bahwa arah arus elektron searah dengan pergerakan elektron, sedang arah arus listrik berlawanan dengan arah arus elektron. 

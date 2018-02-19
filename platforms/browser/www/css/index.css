@@ -97,6 +97,12 @@ h1 {
     text-align:center;
 	text-overflow: ellipsis;
 }
+sup{
+	font-size:9px;
+}
+sub{
+	font-size:9px;
+}
 #header1{
 	overflow:initial;
 }
