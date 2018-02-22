@@ -24,7 +24,8 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
+    
+	background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -36,6 +37,7 @@ body {
         color-stop(0.51, #E4E4E4)
     );
     background-attachment:fixed;
+	
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
@@ -110,6 +112,11 @@ sub{
 	text-transform:none;
 	font-size:13px;
     font-weight:bold;	
+}
+.bg-welcome{	
+	background-image:  url('../img/bg/hexagonal.jpg');
+	background-position: center;
+	background-repeat: repeat;
 }
 .header{
 	min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; 
