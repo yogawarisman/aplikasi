@@ -32,7 +32,7 @@
 		</audio>
         <div id="app">
 			<!-- welcome-page  -->
-			<div id="welcome-page" data-role="page" style="text-align: center;" >
+			<div id="welcome-page"  data-role="page" style="text-align: center;" >
 				<div data-role="content" >
 				<div id="" class="centerText">
                     <img src="img/uny.png" class="atom" />
@@ -45,12 +45,10 @@
 				</div>
 			</div>
 			<!-- home-page  -->
-            <div id="home-page" class="bg-welcome"  data-role="page">
-                <div id="header1" data-role="content" data-theme="a" >
-				<h1>Konsep Rangkaian Listrik</h1>
-				<hr>
-				</div>				
-				<div data-role="content" >				
+            <div id="home-page" data-role="page">
+                <div  data-role="content" >
+					<h1 id="header1">Konsep Rangkaian Listrik</h1>
+					<hr>							
 					<div id="logoContainer" class="images">
                             <img src="img/animation.gif" id="logo"  />
                     </div> 
@@ -77,7 +75,7 @@
                 </div>
             </div>
 			<!-- /page  -->
-			 <div  id="silabus-page" data-role="page">
+			 <div  id="silabus-page" class="background" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page" data-transition="slide" data-direction="reverse" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Silabus</h1>
@@ -110,7 +108,7 @@
 				</div>
 			</div>
 			<!-- /page  -->
-			<div  id="materi-page" data-role="page">
+			<div  id="materi-page" class="background" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed"  class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-transition="slide" data-direction="reverse" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
