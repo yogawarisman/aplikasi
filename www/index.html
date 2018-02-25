@@ -5,16 +5,29 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
-
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />		
-		<script type="text/javascript" src="js/latex.js"></script>
-		<script type="text/javascript" src="libs/fastclick.min.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+		
+		
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
-				
-		<script>	
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/latex.js"></script>		
+		<script type="text/javascript" src="phonegap.js"></script>		
+		<script>
+		// Call onDeviceReady when PhoneGap is loaded.
+		//
+		// At this point, the document has loaded but phonegap-1.0.0.js has not.
+		// When PhoneGap is loaded and talking with the native device,
+		// it will call the event `deviceready`.
+		// 
+		document.addEventListener("deviceready", onDeviceReady, false);
+		// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+		//
+		function onDeviceReady() {
+			// Now safe to use the PhoneGap API
+			document.getElementById("app").style.display = "initial";
+		}
 		function onBackKeyDown(){
 			navigator.app.backHistory();
 		}
@@ -30,7 +43,7 @@
 		<audio autoplay loop>
 			<source src="sound/harvest moon opening.mp3" type="audio/mpeg" />
 		</audio>
-        <div id="app">
+        <div id="app" style="display:initial;">
 			<!-- welcome-page  -->
 			<div id="welcome-page"  data-role="page" style="text-align: center;" >
 				<div data-role="content" >
@@ -865,8 +878,8 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 				sndClick.play();
 			});
 		</script>	
-	   <!---->		
-		<script type="text/javascript" src="phonegap.js"></script>
+	   <!---->
+	   	<script type="text/javascript" src="libs/fastclick.min.js"></script>		
 		<script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">
             app.initialize();

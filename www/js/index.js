@@ -18,15 +18,21 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function() {        
         this.bindEvents();
-    },
+        this.initFastClick();
+	},
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+	initFastClick : function() {
+        window.addEventListener('load', function() {
+            FastClick.attach(document.body);
+        }, false);
     },
     // deviceready Event Handler
     //
