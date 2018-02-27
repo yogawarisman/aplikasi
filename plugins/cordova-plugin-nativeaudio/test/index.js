@@ -19,10 +19,8 @@
 var app = {
     // Application Constructor
     initialize: function() {
-		console.log("console log init");	
         this.bindEvents();
-        this.initFastClick();
-	},
+    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -30,20 +28,15 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-	initFastClick : function() {
-        window.addEventListener('load', function() {
-            FastClick.attach(document.body);
-        }, false);
-    },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        document.addEventListener("backbutton", onBackKeyDown, false);
-		console.log(Media);
-    }
-	// Update DOM on a Received Event
+        app.receivedEvent('deviceready');
+        console.log('deviceready');
+    },
+    // Update DOM on a Received Event
     receivedEvent: function(id) {
 
         if( window.plugins && window.plugins.NativeAudio ) {
@@ -74,33 +67,13 @@ var app = {
         }
 
     },
-	play: function(drum) {
+
+    play: function(drum) {
         document.getElementById(drum).classList.add('touched');
         window.plugins.NativeAudio.play(drum, 
                                         function(msg){console.info(msg), document.getElementById(drum).classList.remove('touched');},
                                         function(msg){ console.error( 'Error: ' + msg ); });
     }
-};
 
-//0=a; 1=b; 2=c; 3=d; 4=e; 
- correctAnswers=[0,1,2,3,4];
-var AnsweredCorrectly=0;
-	function start(){
-	document.getElementById('quizstart').style.display="none";
-	document.getElementById('question0').style.display="block";
-	}
-	function toggle(a,b){
-	AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:-1);
-	document.getElementById('question'+a).style.display="none";
-	document.getElementById('question'+b).style.display="block";
-	}
-	function end(a){
-	AnsweredCorrectly+=(document.getElementsByName('ans'+a)[correctAnswers[a]].checked?1:-1);
-	document.getElementById('question'+a).style.display="none";
-	document.getElementById('summary').style.display="block";
-	document.getElementById('result').innerHTML=AnsweredCorrectly;
-	}
-	function cobalagi(){
-	location.reload(true);
-	AnsweredCorrectly=0;
-	}
+
+};
