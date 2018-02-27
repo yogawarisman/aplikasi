@@ -18,7 +18,8 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {        
+    initialize: function() {
+		console.log("console log init");	
         this.bindEvents();
         this.initFastClick();
 	},
@@ -40,9 +41,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         document.addEventListener("backbutton", onBackKeyDown, false);
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {        
+		console.log(Media);
     }
 };
 

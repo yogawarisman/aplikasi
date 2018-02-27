@@ -5,16 +5,31 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
-
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />		
-		<script type="text/javascript" src="js/latex.js"></script>
-		<script type="text/javascript" src="libs/fastclick.min.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+		
+		
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
-				
-		<script>	
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/latex.js"></script>		
+		<script type="text/javascript" src="phonegap.js"></script>		
+		<script>
+			
+		// Call onDeviceReady when PhoneGap is loaded.
+		//
+		// At this point, the document has loaded but phonegap-1.0.0.js has not.
+		// When PhoneGap is loaded and talking with the native device,
+		// it will call the event `deviceready`.
+		// 
+		document.addEventListener("deviceready", onDeviceReady, false);
+		// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+		//
+		function onDeviceReady() {
+			// Now safe to use the PhoneGap API
+			document.getElementById("app").style.display = "initial";
+			console.log(Media);
+		}
 		function onBackKeyDown(){
 			navigator.app.backHistory();
 		}
@@ -22,13 +37,17 @@
 		// Handle the offline event
 		console.log("lost connection");
 		}
+		
 		</script>
 		<title>Aplikasi Android Arus Listrik Mendiskripsikan Konsep Rangkaian Listrik</title>
     </head>
     <body>
-        <div id="app">
+	<!--	<audio autoplay loop>
+			<source src="sound/harvest moon opening.mp3" type="audio/mpeg" />
+		</audio> -->
+        <div id="app" style="display:initial;">
 			<!-- welcome-page  -->
-			<div id="welcome-page" data-role="page" style="text-align: center;" >
+			<div id="welcome-page"  data-role="page" style="text-align: center;" >
 				<div data-role="content" >
 				<div id="" class="centerText">
                     <img src="img/uny.png" class="atom" />
@@ -42,14 +61,12 @@
 			</div>
 			<!-- home-page  -->
             <div id="home-page" data-role="page">
-                <div id="header1" data-role="content" data-theme="a" >
-				<h1>Konsep Rangkaian Listrik</h1>
-				<hr>
-				</div>				
-				<div data-role="content" >				
+                <div  data-role="content" >
+					<h1 id="header1">Konsep Rangkaian Listrik</h1>
+					<hr>							
 					<div id="logoContainer" class="images">
                             <img src="img/animation.gif" id="logo"  />
-                    </div>
+                    </div> 
 					<hr>
                     <div id="menu">
 						<a data-icon="calendar" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
@@ -73,7 +90,7 @@
                 </div>
             </div>
 			<!-- /page  -->
-			 <div  id="silabus-page" data-role="page">
+			 <div  id="silabus-page" class="background" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page" data-transition="slide" data-direction="reverse" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Silabus</h1>
@@ -106,7 +123,7 @@
 				</div>
 			</div>
 			<!-- /page  -->
-			<div  id="materi-page" data-role="page">
+			<div  id="materi-page" class="background" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed"  class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-transition="slide" data-direction="reverse" data-inline="true" >Back</a>
                     <h1>MATERI</h1>
@@ -846,22 +863,40 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 					<h4 class="centerText" >2011</h4>
 					<br><br><br>
 					<h5 id="h4info" class="centerText">aplikasi ini dibuat dengan github, phonegap dan phonegap build</h5>
+					<button onClick="my_media.play()">play audio</button>
+					
 				</div>
 				<div id="info" data-role="content" class="centerText">
 						<img id="githublogo" src="img/GitHub_Logo.png" class="atom"/>	
 						<img id="phonegaplogo" src="img/phonegap.png" class="atom"/>
 						<img id="pgblogo" src="img/adobe-phonegap-build.png" class="atom"/>
-				</div>
-				<div class="centerText">
-						<img class="centerText" src="https://dummyimage.com/200x200/000/fff.png&text=this+is+just+a+text" >
-				</div>
+				</div>				
             </div>
 			
 			<!-- /end page  -->
 		</div>
-    
-	   <!---->		
-		<script type="text/javascript" src="phonegap.js"></script>
+		<script>
+		/*
+		var sndClick = new Audio();
+			sndClick.src = 'sound/click2.mp3';
+			$("a").mousedown(function() {
+				sndClick.play();
+			});
+		*/
+		// Play audio
+		//
+		var my_media = new Audio('sound/notify.mp3', 
+		// success callback
+		function () {
+            console.log("playAudio():Audio Success");
+        },
+        // error callback
+        function (err) {
+            console.log("playAudio():Audio Error: " + err);
+        });
+		</script>	
+	   <!---->
+	   	<script type="text/javascript" src="libs/fastclick.min.js"></script>		
 		<script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">
             app.initialize();
