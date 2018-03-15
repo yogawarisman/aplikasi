@@ -48,6 +48,12 @@ body {
 }
 p{
 	text-transform:none;
+	font-family:font-family: "Times New Roman", Times, serif;
+}
+span{
+	font-weight:bold;
+	color: blue;
+	text-transform:none;
 }
 /* Portrait layout (default) */
 .app {
