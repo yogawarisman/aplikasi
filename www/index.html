@@ -14,6 +14,7 @@
 		<script type="text/javascript" src="plugins/cordova-plugin-nativeaudio/www/nativeaudio.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/latex.js"></script>		
+		<script type="text/javascript" src="quiz.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>		
 		<script>
 			
@@ -70,10 +71,7 @@
 					<hr>
                     <div id="menu">
 						<a data-icon="calendar" data-theme="a" href="#silabus-page" data-transition="slide" data-role="button">SILABUS</a>
-                        <a data-icon="search" data-theme="a" href="#materi-page" data-transition="slide" data-role="button">MATERI</a>						
-                        <!-- inactive  
-						<a data-icon="edit" data-theme="a" href="#quiz-page" data-transition="slideup" data-role="button">QUIZ</a>
-						-->
+                        <a data-icon="search" data-theme="a" href="#materi-page" data-transition="slide" data-role="button">MATERI</a>
                         <a data-icon="info" data-theme="a" href="#tentang-page"  data-role="button">TENTANG</a>
                         <a data-icon="delete" data-theme="b" href="#keluar" data-rel="popup" data-role="button">Keluar</a>					
                     	<div id="keluar" data-role="popup" data-overlay-theme="a" data-theme="a" data-dismissable="false" class="ui-corner-all">		
@@ -259,9 +257,121 @@
 						<img src="img/gbr 1.1 c.png" class="atom"/>
 					</div>
 					<p class="centerText">Gambar 1.1 fenomena listrik statis</p>
-					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop. <b>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</b></p>									
+					<p>Dengan penalaran yang lebih mendalam, pertanyaan berikut ini akan muncul di benak kita. Bagaimana dan mengapa fenomena alam seperti itu terjadi? Untuk lebih menyelami hal tersebut, tentunya kalian masih ingat, ketika melakukan percobaan dengan menggunakan alat elektroskop seperti diperlihatkan pada gambar Elektroskop. <b>Elektroskop adalah alat yang dapat digunakan untuk mengetahui ada tidaknya muatan listrik pada suatu benda.</b></p>
+					<a data-icon="edit" data-theme="a" href="#quiz1.1-page"  data-role="button">QUIZ</a>
+					
 				</div>								
-            </div>	
+            </div>
+			<!-- /page  -->	
+			<div  id="quiz1.1-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#konsep-page" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Quiz</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">					
+					<h2  style="font-size:20px;text-align: center;" >Muatan Listrik dan Fenomena Listrik Statis</h2>
+					<div class="quizstart" id="quizstart1a">
+					 <h3>Penilaian : <br>
+					 Benar =  1 poin <br>
+					 Salah =  0 poin</h3>
+					 <button onClick="start1a()">M U L A I</button>                
+					</div>
+					<div id="quest1a0" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
+							<input type="radio" name="ans0" id="radio1_0" value="" />
+							<label for="radio1_0">enam</label>
+							<input type="radio" name="ans0" id="radio1_1" value="" />
+							<label for="radio1_1">tujuh</label>
+							<input type="radio" name="ans0" id="radio1_2" value="" />
+							<label for="radio1_2">delapan</label>
+							<input type="radio" name="ans0" id="radio1_3" value="" />
+							<label for="radio1_3">sembilan</label>
+							<input type="radio" name="ans0" id="radio1_4" value="" />
+							<label for="radio1_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1a(0,1)">Lanjut</button>
+					</div>
+					<div id="quest1a1" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
+							<input name="ans1" type="radio" id="radio2_0" value="" />
+							<label for="radio2_0">enam</label>
+							<input type="radio" name="ans1" id="radio2_1" value="" />
+							<label for="radio2_1">tujuh</label>
+							<input type="radio" name="ans1" id="radio2_2" value="" />
+							<label for="radio2_2">delapan</label>
+							<input type="radio" name="ans1" id="radio2_3" value="" />
+							<label for="radio2_3">sembilan</label>
+							<input type="radio" name="ans1" id="radio2_4" value="" />
+							<label for="radio2_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1a(1,2)">Lanjut</button>
+					</div>
+					<div id="quest1a2" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
+							<input type="radio" name="ans2" id="radio3_0" value="" />
+							<label for="radio3_0">enam</label>
+							<input type="radio" name="ans2" id="radio3_1" value="" />
+							<label for="radio3_1">tujuh</label>
+							<input type="radio" name="ans2" id="radio3_2" value="" />
+							<label for="radio3_2">delapan</label>
+							<input type="radio" name="ans2" id="radio3_3" value="" />
+							<label for="radio3_3">sembilan</label>
+							<input type="radio" name="ans2" id="radio3_4" value="" />
+							<label for="radio3_4">sepuluh</label>
+						</fieldset>
+					
+					   <button onClick="toggle1a(2,3)">Lanjut</button>
+					</div>
+					<div id="quest1a3" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
+							<input name="ans3" type="radio" id="radio4_0" value="" />
+							<label for="radio4_0">enam</label>
+							<input type="radio" name="ans3" id="radio4_1" value="" />
+							<label for="radio4_1">tujuh</label>
+							<input type="radio" name="ans3" id="radio4_2" value="" />
+							<label for="radio4_2">delapan</label>
+							<input type="radio" name="ans3" id="radio4_3" value="" />
+							<label for="radio4_3">sembilan</label>
+							<input type="radio" name="ans3" id="radio4_4" value="" />
+							<label for="radio4_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1a(3,4)">Lanjut</button>
+					</div>
+					<div id="quest1a4" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
+							<input name="ans4" type="radio" id="radio5_0" value="" />
+							<label for="radio5_0">enam</label>
+							<input type="radio" name="ans4" id="radio5_1" value="" />
+							<label for="radio5_1">tujuh</label>
+							<input type="radio" name="ans4" id="radio5_2" value="" />
+							<label for="radio5_2">delapan</label>
+							<input type="radio" name="ans4" id="radio5_3" value="" />
+							<label for="radio5_3">sembilan</label>
+							<input type="radio" name="ans4" id="radio5_4" value="" />
+							<label for="radio5_4">sepuluh</label>
+						</fieldset>
+						<button onClick="end1a(4)">Lanjut</button>
+					</div>
+					
+					<div id="summary1a" style="display:none">
+						<h2 class="centerText">Quiz yang berhasil terjawab: <span id="result1a"></span></h2>
+						<button onClick="cobalagi()">COBA LAGI</button>
+					</div>
+				</div>
+			</div>	
 			<!-- /page  -->	
 			<div  id="teoriatom-page" data-role="page">
 				<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
@@ -316,7 +426,118 @@
 						<img src="img/gbr 1.5.png" class="atom"/>
 					</div>
 					<p class="centerText">Gambar 1.5 susunan atom hidrogen dan helium</p>
+					<a data-icon="edit" data-theme="a" href="#quiz1.2-page"  data-role="button">QUIZ</a>
 				</div>	
+			</div>
+			<!-- /page  -->	
+			<div  id="quiz1.2-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Quiz</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">					
+					<h2  style="font-size:20px;text-align: center;" >Teori Atom</h2>
+					<div class="quizstart" id="quizstart1b">
+					 <h3>Penilaian : <br>
+					 Benar =  1 poin <br>
+					 Salah =  0 poin</h3>
+					 <button onClick="start1b()">M U L A I</button>                
+					</div>
+					<div id="quest1b0" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
+							<input type="radio" name="ans1b0" id="radio1_0" value="" />
+							<label for="radio1_0">enam</label>
+							<input type="radio" name="ans1b0" id="radio1_1" value="" />
+							<label for="radio1_1">tujuh</label>
+							<input type="radio" name="ans1b0" id="radio1_2" value="" />
+							<label for="radio1_2">delapan</label>
+							<input type="radio" name="ans1b0" id="radio1_3" value="" />
+							<label for="radio1_3">sembilan</label>
+							<input type="radio" name="ans1b0" id="radio1_4" value="" />
+							<label for="radio1_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1b(0,1)">Lanjut</button>
+					</div>
+					<div id="quest1b1" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
+							<input name="ans1b1" type="radio" id="radio2_0" value="" />
+							<label for="radio2_0">enam</label>
+							<input type="radio" name="ans1b1" id="radio2_1" value="" />
+							<label for="radio2_1">tujuh</label>
+							<input type="radio" name="ans1b1" id="radio2_2" value="" />
+							<label for="radio2_2">delapan</label>
+							<input type="radio" name="ans1b1" id="radio2_3" value="" />
+							<label for="radio2_3">sembilan</label>
+							<input type="radio" name="ans1b1" id="radio2_4" value="" />
+							<label for="radio2_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1b(1,2)">Lanjut</button>
+					</div>
+					<div id="quest1b2" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
+							<input type="radio" name="ans1b2" id="radio3_0" value="" />
+							<label for="radio3_0">enam</label>
+							<input type="radio" name="ans1b2" id="radio3_1" value="" />
+							<label for="radio3_1">tujuh</label>
+							<input type="radio" name="ans1b2" id="radio3_2" value="" />
+							<label for="radio3_2">delapan</label>
+							<input type="radio" name="ans1b2" id="radio3_3" value="" />
+							<label for="radio3_3">sembilan</label>
+							<input type="radio" name="ans1b2" id="radio3_4" value="" />
+							<label for="radio3_4">sepuluh</label>
+						</fieldset>
+					
+					   <button onClick="toggle1b(2,3)">Lanjut</button>
+					</div>
+					<div id="quest1b3" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
+							<input name="ans1b3" type="radio" id="radio4_0" value="" />
+							<label for="radio4_0">enam</label>
+							<input type="radio" name="ans1b3" id="radio4_1" value="" />
+							<label for="radio4_1">tujuh</label>
+							<input type="radio" name="ans1b3" id="radio4_2" value="" />
+							<label for="radio4_2">delapan</label>
+							<input type="radio" name="ans1b3" id="radio4_3" value="" />
+							<label for="radio4_3">sembilan</label>
+							<input type="radio" name="ans1b3" id="radio4_4" value="" />
+							<label for="radio4_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1b(3,4)">Lanjut</button>
+					</div>
+					<div id="quest1b4" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
+							<input name="ans1b4" type="radio" id="radio5_0" value="" />
+							<label for="radio5_0">enam</label>
+							<input type="radio" name="ans1b4" id="radio5_1" value="" />
+							<label for="radio5_1">tujuh</label>
+							<input type="radio" name="ans1b4" id="radio5_2" value="" />
+							<label for="radio5_2">delapan</label>
+							<input type="radio" name="ans1b4" id="radio5_3" value="" />
+							<label for="radio5_3">sembilan</label>
+							<input type="radio" name="ans1b4" id="radio5_4" value="" />
+							<label for="radio5_4">sepuluh</label>
+						</fieldset>
+						<button onClick="end1b(4)">Lanjut</button>
+					</div>
+					
+					<div id="summary1b" style="display:none">
+						<h2 class="centerText">Quiz yang berhasil terjawab: <span id="result1b"></span></h2>
+						<button onClick="cobalagi()">COBA LAGI</button>
+					</div>
+				</div>
 			</div>
 			<!-- /page  -->	
 			<div  id="fenomena-page" data-role="page">
@@ -376,7 +597,118 @@
 						Sebaliknya bila kedua atom bermuatan sama maka terjadi gaya tolak antar keduanya.
 					</p>
 					<p></p>
-					<p></p>
+					<a data-icon="edit" data-theme="a" href="#quiz1.3-page"  data-role="button">QUIZ</a>
+					
+				</div>
+			</div>
+			<!--pages-->
+			<div  id="quiz1.3-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Quiz</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">					
+					<h2  style="font-size:20px;text-align: center;" >Fenomena Gaya Listrik</h2>
+					<div class="quizstart" id="quizstart1c">
+					 <h3>Penilaian : <br>
+					 Benar =  1 poin <br>
+					 Salah =  0 poin</h3>
+					 <button onClick="start1c()">M U L A I</button>                
+					</div>
+					<div id="quest1c0" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
+							<input type="radio" name="ans1c0" id="radio1_0" value="" />
+							<label for="radio1_0">enam</label>
+							<input type="radio" name="ans1c0" id="radio1_1" value="" />
+							<label for="radio1_1">tujuh</label>
+							<input type="radio" name="ans1c0" id="radio1_2" value="" />
+							<label for="radio1_2">delapan</label>
+							<input type="radio" name="ans1c0" id="radio1_3" value="" />
+							<label for="radio1_3">sembilan</label>
+							<input type="radio" name="ans1c0" id="radio1_4" value="" />
+							<label for="radio1_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1c(0,1)">Lanjut</button>
+					</div>
+					<div id="quest1c1" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
+							<input name="ans1c1" type="radio" id="radio2_0" value="" />
+							<label for="radio2_0">enam</label>
+							<input type="radio" name="ans1c1" id="radio2_1" value="" />
+							<label for="radio2_1">tujuh</label>
+							<input type="radio" name="ans1c1" id="radio2_2" value="" />
+							<label for="radio2_2">delapan</label>
+							<input type="radio" name="ans1c1" id="radio2_3" value="" />
+							<label for="radio2_3">sembilan</label>
+							<input type="radio" name="ans1c1" id="radio2_4" value="" />
+							<label for="radio2_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1c(1,2)">Lanjut</button>
+					</div>
+					<div id="quest1c2" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
+							<input type="radio" name="ans1c2" id="radio3_0" value="" />
+							<label for="radio3_0">enam</label>
+							<input type="radio" name="ans1c2" id="radio3_1" value="" />
+							<label for="radio3_1">tujuh</label>
+							<input type="radio" name="ans1c2" id="radio3_2" value="" />
+							<label for="radio3_2">delapan</label>
+							<input type="radio" name="ans1c2" id="radio3_3" value="" />
+							<label for="radio3_3">sembilan</label>
+							<input type="radio" name="ans1c2" id="radio3_4" value="" />
+							<label for="radio3_4">sepuluh</label>
+						</fieldset>
+					
+					   <button onClick="toggle1c(2,3)">Lanjut</button>
+					</div>
+					<div id="quest1c3" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
+							<input name="ans1c3" type="radio" id="radio4_0" value="" />
+							<label for="radio4_0">enam</label>
+							<input type="radio" name="ans1c3" id="radio4_1" value="" />
+							<label for="radio4_1">tujuh</label>
+							<input type="radio" name="ans1c3" id="radio4_2" value="" />
+							<label for="radio4_2">delapan</label>
+							<input type="radio" name="ans1c3" id="radio4_3" value="" />
+							<label for="radio4_3">sembilan</label>
+							<input type="radio" name="ans1c3" id="radio4_4" value="" />
+							<label for="radio4_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1c(3,4)">Lanjut</button>
+					</div>
+					<div id="quest1c4" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
+							<input name="ans1c4" type="radio" id="radio5_0" value="" />
+							<label for="radio5_0">enam</label>
+							<input type="radio" name="ans1c4" id="radio5_1" value="" />
+							<label for="radio5_1">tujuh</label>
+							<input type="radio" name="ans1c4" id="radio5_2" value="" />
+							<label for="radio5_2">delapan</label>
+							<input type="radio" name="ans1c4" id="radio5_3" value="" />
+							<label for="radio5_3">sembilan</label>
+							<input type="radio" name="ans1c4" id="radio5_4" value="" />
+							<label for="radio5_4">sepuluh</label>
+						</fieldset>
+						<button onClick="end1c(4)">Lanjut</button>
+					</div>
+					
+					<div id="summary1c" style="display:none">
+						<h2 class="centerText">Quiz yang berhasil terjawab: <span id="result1c"></span></h2>
+						<button onClick="cobalagi()">COBA LAGI</button>
+					</div>
 				</div>
 			</div>
 			<!-- /page  -->
@@ -403,7 +735,118 @@
 						<img src="img/gbr 1.10.png" class="atom"/>
 					</div>
 					<p class="centerText">Gambar 1.10 sifat garis-garis gaya listrik </p>
-					<p></p>								
+					<p></p>
+					<a data-icon="edit" data-theme="a" href="#quiz1.4-page"  data-role="button">QUIZ</a> 
+				</div>
+			</div>
+			<!--pages-->
+			<div  id="quiz1.4-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Quiz</h1>
+                </div>
+				<div data-role="content"  style="font-size:14px">					
+					<h2  style="font-size:20px;text-align: center;" >Medan Listrik</h2>
+					<div class="quizstart" id="quizstart1d">
+					 <h3>Penilaian : <br>
+					 Benar =  1 poin <br>
+					 Salah =  0 poin</h3>
+					 <button onClick="start1d()">M U L A I</button>                
+					</div>
+					<div id="quest1d0" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
+							<input type="radio" name="ans1d0" id="radio1_0" value="" />
+							<label for="radio1_0">enam</label>
+							<input type="radio" name="ans1d0" id="radio1_1" value="" />
+							<label for="radio1_1">tujuh</label>
+							<input type="radio" name="ans1d0" id="radio1_2" value="" />
+							<label for="radio1_2">delapan</label>
+							<input type="radio" name="ans1d0" id="radio1_3" value="" />
+							<label for="radio1_3">sembilan</label>
+							<input type="radio" name="ans1d0" id="radio1_4" value="" />
+							<label for="radio1_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1d(0,1)">Lanjut</button>
+					</div>
+					<div id="quest1d1" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
+							<input name="ans1d1" type="radio" id="radio2_0" value="" />
+							<label for="radio2_0">enam</label>
+							<input type="radio" name="ans1d1" id="radio2_1" value="" />
+							<label for="radio2_1">tujuh</label>
+							<input type="radio" name="ans1d1" id="radio2_2" value="" />
+							<label for="radio2_2">delapan</label>
+							<input type="radio" name="ans1d1" id="radio2_3" value="" />
+							<label for="radio2_3">sembilan</label>
+							<input type="radio" name="ans1d1" id="radio2_4" value="" />
+							<label for="radio2_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1d(1,2)">Lanjut</button>
+					</div>
+					<div id="quest1d2" style="display:none">
+					<span class=""></span><br>
+					
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
+							<input type="radio" name="ans1d2" id="radio3_0" value="" />
+							<label for="radio3_0">enam</label>
+							<input type="radio" name="ans1d2" id="radio3_1" value="" />
+							<label for="radio3_1">tujuh</label>
+							<input type="radio" name="ans1d2" id="radio3_2" value="" />
+							<label for="radio3_2">delapan</label>
+							<input type="radio" name="ans1d2" id="radio3_3" value="" />
+							<label for="radio3_3">sembilan</label>
+							<input type="radio" name="ans1d2" id="radio3_4" value="" />
+							<label for="radio3_4">sepuluh</label>
+						</fieldset>
+					
+					   <button onClick="toggle1d(2,3)">Lanjut</button>
+					</div>
+					<div id="quest1d3" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
+							<input name="ans1d3" type="radio" id="radio4_0" value="" />
+							<label for="radio4_0">enam</label>
+							<input type="radio" name="ans1d3" id="radio4_1" value="" />
+							<label for="radio4_1">tujuh</label>
+							<input type="radio" name="ans1d3" id="radio4_2" value="" />
+							<label for="radio4_2">delapan</label>
+							<input type="radio" name="ans1d3" id="radio4_3" value="" />
+							<label for="radio4_3">sembilan</label>
+							<input type="radio" name="ans1d3" id="radio4_4" value="" />
+							<label for="radio4_4">sepuluh</label>
+						</fieldset>
+						<button onClick="toggle1d(3,4)">Lanjut</button>
+					</div>
+					<div id="quest1d4" style="display:none">
+					<span class=""></span><br>
+						<fieldset data-role="controlgroup">
+							<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
+							<input name="ans1d4" type="radio" id="radio5_0" value="" />
+							<label for="radio5_0">enam</label>
+							<input type="radio" name="ans1d4" id="radio5_1" value="" />
+							<label for="radio5_1">tujuh</label>
+							<input type="radio" name="ans1d4" id="radio5_2" value="" />
+							<label for="radio5_2">delapan</label>
+							<input type="radio" name="ans1d4" id="radio5_3" value="" />
+							<label for="radio5_3">sembilan</label>
+							<input type="radio" name="ans1d4" id="radio5_4" value="" />
+							<label for="radio5_4">sepuluh</label>
+						</fieldset>
+						<button onClick="end1d(4)">Lanjut</button>
+					</div>
+					
+					<div id="summary1d" style="display:none">
+						<h2 class="centerText">Quiz yang berhasil terjawab: <span id="result1d"></span></h2>
+						<button onClick="cobalagi()">COBA LAGI</button>
+					</div>
 				</div>
 			</div>
 			<!-- /page  -->
@@ -746,108 +1189,7 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 					<h1>QUIZ</h1>
 				</div>
 				<div data-role="content">
-					<h2 data-pos="center" style="font-size:20px" >Berikut adalah contoh quiz</h2>
-					<div id="quizstart">
-					 <h3>Penilaian : <br>
-					 Benar =  1 poin <br>
-					 Salah = -1 poin</h3>
-					 <button onClick="start()">M U L A I</button>                
-					</div>
-					<div id="question0" style="display:none">
-					<span class=""></span><br>
 					
-						<fieldset data-role="controlgroup">
-							<legend class="question">Berapakah tiga ditambah dengan tiga?</legend>
-							<input type="radio" name="ans0" id="radio1_0" value="" />
-							<label for="radio1_0">enam</label>
-							<input type="radio" name="ans0" id="radio1_1" value="" />
-							<label for="radio1_1">tujuh</label>
-							<input type="radio" name="ans0" id="radio1_2" value="" />
-							<label for="radio1_2">delapan</label>
-							<input type="radio" name="ans0" id="radio1_3" value="" />
-							<label for="radio1_3">sembilan</label>
-							<input type="radio" name="ans0" id="radio1_4" value="" />
-							<label for="radio1_4">sepuluh</label>
-						</fieldset>
-						<button onClick="toggle(0,1)">Lanjut</button>
-					</div>
-					<div id="question1" style="display:none">
-					<span class=""></span><br>
-					
-						<fieldset data-role="controlgroup">
-							<legend class="question">Berapakah tiga ditambah dengan empat?</legend>
-							<input name="ans1" type="radio" id="radio2_0" value="" />
-							<label for="radio2_0">enam</label>
-							<input type="radio" name="ans1" id="radio2_1" value="" />
-							<label for="radio2_1">tujuh</label>
-							<input type="radio" name="ans1" id="radio2_2" value="" />
-							<label for="radio2_2">delapan</label>
-							<input type="radio" name="ans1" id="radio2_3" value="" />
-							<label for="radio2_3">sembilan</label>
-							<input type="radio" name="ans1" id="radio2_4" value="" />
-							<label for="radio2_4">sepuluh</label>
-						</fieldset>
-						<button onClick="toggle(1,2)">Lanjut</button>
-					</div>
-					<div id="question2" style="display:none">
-					<span class=""></span><br>
-					
-						<fieldset data-role="controlgroup">
-							<legend class="question">Berapakah tiga ditambah dengan lima?</legend>
-							<input type="radio" name="ans2" id="radio3_0" value="" />
-							<label for="radio3_0">enam</label>
-							<input type="radio" name="ans2" id="radio3_1" value="" />
-							<label for="radio3_1">tujuh</label>
-							<input type="radio" name="ans2" id="radio3_2" value="" />
-							<label for="radio3_2">delapan</label>
-							<input type="radio" name="ans2" id="radio3_3" value="" />
-							<label for="radio3_3">sembilan</label>
-							<input type="radio" name="ans2" id="radio3_4" value="" />
-							<label for="radio3_4">sepuluh</label>
-						</fieldset>
-					
-					   <button onClick="toggle(2,3)">Lanjut</button>
-					</div>
-					<div id="question3" style="display:none">
-					<span class=""></span><br>
-						<fieldset data-role="controlgroup">
-							<legend class="question">Berapakah tiga ditambah dengan enam?</legend>
-							<input name="ans3" type="radio" id="radio4_0" value="" />
-							<label for="radio4_0">enam</label>
-							<input type="radio" name="ans3" id="radio4_1" value="" />
-							<label for="radio4_1">tujuh</label>
-							<input type="radio" name="ans3" id="radio4_2" value="" />
-							<label for="radio4_2">delapan</label>
-							<input type="radio" name="ans3" id="radio4_3" value="" />
-							<label for="radio4_3">sembilan</label>
-							<input type="radio" name="ans3" id="radio4_4" value="" />
-							<label for="radio4_4">sepuluh</label>
-						</fieldset>
-						<button onClick="toggle(3,4)">Lanjut</button>
-					</div>
-					<div id="question4" style="display:none">
-					<span class=""></span><br>
-						<fieldset data-role="controlgroup">
-							<legend class="question">Berapakah tiga ditambah dengan tujuh?</legend>
-							<input name="ans4" type="radio" id="radio5_0" value="" />
-							<label for="radio5_0">enam</label>
-							<input type="radio" name="ans4" id="radio5_1" value="" />
-							<label for="radio5_1">tujuh</label>
-							<input type="radio" name="ans4" id="radio5_2" value="" />
-							<label for="radio5_2">delapan</label>
-							<input type="radio" name="ans4" id="radio5_3" value="" />
-							<label for="radio5_3">sembilan</label>
-							<input type="radio" name="ans4" id="radio5_4" value="" />
-							<label for="radio5_4">sepuluh</label>
-						</fieldset>
-						<button onClick="end(4)">Lanjut</button>
-					</div>
-					
-					<div id="summary" style="display:none">
-						<h2>Nilaimu adalah :  <span id="result"></span></h2>
-						<button onClick="cobalagi()">COBA LAGI</button>
-						<a href="#" data-role="button" >Pembahasan</a>
-					</div>
 					
 				</div>
 			</div>	
@@ -883,10 +1225,91 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 			sndClick.src = 'sound/click2.mp3';
 			$("a").mousedown(function() {
 				sndClick.play();
-			});		
+			});
+		//Muatan Listrik dan Fenomena Listrik Statis		
+		//0=a; 1=b; 2=c; 3=d; 4=e; 
+		correctAnswers1a=[0,1,2,3,4];
+		var AnsweredCorrectly1a=0;
+		function start1a(){
+		document.getElementById('quizstart1a').style.display="none";
+		document.getElementById('quest1a0').style.display="block";
+		}
+		function toggle1a(a,b){
+		AnsweredCorrectly1a+=(document.getElementsByName('ans'+a)[correctAnswers1a[a]].checked?1:0);
+		document.getElementById('quest1a'+a).style.display="none";
+		document.getElementById('quest1a'+b).style.display="block";
+		}
+		function end1a(a){
+		AnsweredCorrectly1a+=(document.getElementsByName('ans'+a)[correctAnswers1a[a]].checked?1:0);
+		document.getElementById('quest1a'+a).style.display="none";
+		document.getElementById('summary1a').style.display="block";
+		document.getElementById('result1a').innerHTML=AnsweredCorrectly1a;
+		}
 		
+		//Teori Atom		
+		//0=a; 1=b; 2=c; 3=d; 4=e; 
+		correctAnswers1b=[0,1,2,3,4];
+		var AnsweredCorrectly1b=0;
+		function start1b(){
+		document.getElementById('quizstart1b').style.display="none";
+		document.getElementById('quest1b0').style.display="block";
+		}
+		function toggle1b(a,b){
+		AnsweredCorrectly1b+=(document.getElementsByName('ans1b'+a)[correctAnswers1b[a]].checked?1:0);
+		document.getElementById('quest1b'+a).style.display="none";
+		document.getElementById('quest1b'+b).style.display="block";
+		}
+		function end1b(a){
+		AnsweredCorrectly1b+=(document.getElementsByName('ans1b'+a)[correctAnswers1b[a]].checked?1:0);
+		document.getElementById('quest1b'+a).style.display="none";
+		document.getElementById('summary1b').style.display="block";
+		document.getElementById('result1b').innerHTML=AnsweredCorrectly1b;
+		}
+		//Fenomena Gaya Listrik		
+		//0=a; 1=b; 2=c; 3=d; 4=e; 
+		correctAnswers1c=[0,1,2,3,4];
+		var AnsweredCorrectly1c=0;
+		function start1c(){
+		document.getElementById('quizstart1c').style.display="none";
+		document.getElementById('quest1c0').style.display="block";
+		}
+		function toggle1c(a,b){
+		AnsweredCorrectly1c+=(document.getElementsByName('ans1c'+a)[correctAnswers1c[a]].checked?1:0);
+		document.getElementById('quest1c'+a).style.display="none";
+		document.getElementById('quest1c'+b).style.display="block";
+		}
+		function end1c(a){
+		AnsweredCorrectly1c+=(document.getElementsByName('ans1c'+a)[correctAnswers1c[a]].checked?1:0);
+		document.getElementById('quest1c'+a).style.display="none";
+		document.getElementById('summary1c').style.display="block";
+		document.getElementById('result1c').innerHTML=AnsweredCorrectly1c;
+		}
+		//Medan Listrik		
+		//0=a; 1=b; 2=c; 3=d; 4=e; 
+		correctAnswers1d=[0,1,2,3,4];
+		var AnsweredCorrectly1d=0;
+		function start1d(){
+		document.getElementById('quizstart1d').style.display="none";
+		document.getElementById('quest1d0').style.display="block";
+		}
+		function toggle1d(a,b){
+		AnsweredCorrectly1d+=(document.getElementsByName('ans1d'+a)[correctAnswers1d[a]].checked?1:0);
+		document.getElementById('quest1d'+a).style.display="none";
+		document.getElementById('quest1d'+b).style.display="block";
+		}
+		function end1d(a){
+		AnsweredCorrectly1d+=(document.getElementsByName('ans1d'+a)[correctAnswers1d[a]].checked?1:0);
+		document.getElementById('quest1d'+a).style.display="none";
+		document.getElementById('summary1d').style.display="block";
+		document.getElementById('result1d').innerHTML=AnsweredCorrectly1d;
+		}
+		
+		function cobalagi(){
+		location.reload(true);		
+		} /* AnsweredCorrectly1a=0; */
 		</script>	
-	   <!---->
+	    <!---->
+	    
 	   	<script type="text/javascript" src="libs/fastclick.min.js"></script>		
 		<script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">

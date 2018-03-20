@@ -147,8 +147,12 @@ sub{
 }
 #H{margin:auto;}
 #O{margin:auto;}
-	
-#quizstart{
+.question{
+	text-transform:none;
+	font-size:15px;
+    font-weight:bold;
+}	
+.quizstart{
 	margin:10px;
 	text-align:center;
 	padding:4px;
