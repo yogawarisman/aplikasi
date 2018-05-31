@@ -8,31 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
 		
-		<script type="text/javascript" src="plugins/cordova-plugin-nativeaudio/www/nativeaudio.js"></script>		
-		<script>
-			
-		// Call onDeviceReady when PhoneGap is loaded.
-		//
-		// At this point, the document has loaded but phonegap-1.0.0.js has not.
-		// When PhoneGap is loaded and talking with the native device,
-		// it will call the event `deviceready`.
-		// 
-		document.addEventListener("deviceready", onDeviceReady, false);
-		// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-		//
-		function onDeviceReady() {
-			// Now safe to use the PhoneGap API
-			document.getElementById("app").style.display = "initial";			
-		}
-		function onBackKeyDown(){
-			navigator.app.backHistory();
-		}
-		function onOffline() {
-		// Handle the offline event
-		console.log("lost connection");
-		}
-		
-		</script>
+
 		<title>Aplikasi Android Arus Listrik Mendiskripsikan Konsep Rangkaian Listrik</title>
     </head>
     <body>
@@ -1900,15 +1876,15 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 	    <!---->
 		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 		<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
-	    <script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript" src="js/latex.js"></script>		
-		<script type="text/javascript" src="quiz.js"></script>
+	    <!--<script type="text/javascript" src="js/index.js"></script>-->
+		<script type="text/javascript" src="js/latex.js"></script>
 		<script type="text/javascript" src="phonegap.js"></script>
 	   	<script type="text/javascript" src="libs/fastclick.min.js"></script>		
-		<script type="text/javascript" src="cordova.js"></script>
+		<!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript">
             //app.initialize();
         </script>
+		<!--<script type="text/javascript" src="plugins/cordova-plugin-nativeaudio/www/nativeaudio.js"></script>	-->
 		<script>
 		
 		var sndClick = new Audio();
@@ -1916,6 +1892,7 @@ Bentuk energi listrik sangat mudah diubah dalam bentuk energi lain, seperti ener
 			$("a").mousedown(function() {
 				sndClick.play();
 			});
+		// type="text/javascript" src="quiz.js"	
 		//Muatan Listrik dan Fenomena Listrik Statis		
 		//0=a; 1=b; 2=c; 3=d; 4=e; 
 		correctAnswers1a=[2,2,2,3,4];
